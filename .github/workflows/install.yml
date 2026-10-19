@@ -1,0 +1,52 @@
+name: install
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+
+      - name: Install Hermes at the hermes_requires minimum
+        run: |
+          version=$(sed -n 's/^hermes_requires: ">=\(.*\)"$/\1/p' distribution.yaml)
+          git clone -q --depth 1 --branch "v$version" https://github.com/NousResearch/hermes-agent "$RUNNER_TEMP/hermes"
+          (cd "$RUNNER_TEMP/hermes" && uv sync -q --frozen)
+          echo "$RUNNER_TEMP/hermes/.venv/bin" >> "$GITHUB_PATH"
+
+      - name: Install the distribution into a throwaway HERMES_HOME
+        run: |
+          export HERMES_HOME=$(mktemp -d)
+          echo "HERMES_HOME=$HERMES_HOME" >> "$GITHUB_ENV"
+          hermes profile install ./ -y
+          hermes profile info jobsearch | grep -q '^Version:'
+
+      - name: Check that only the allowlisted paths arrived
+        run: |
+          uv run -q --no-project --with pyyaml python - <<'PY'
+          import filecmp, os, subprocess, sys, yaml
+          owned = {p.rstrip("/") for p in yaml.safe_load(open("distribution.yaml"))["distribution_owned"]}
+          profile = os.path.join(os.environ["HERMES_HOME"], "profiles", "jobsearch")
+          tracked = {p.split("/")[0] for p in subprocess.check_output(["git", "ls-files"], text=True).split()}
+          errors = []
+          for entry in sorted(tracked | owned):
+              installed = os.path.join(profile, entry)
+              if entry not in owned:
+                  if os.path.exists(installed):
+                      errors.append(f"{entry} reached the profile")
+              elif entry == "distribution.yaml":
+                  shipped, got = yaml.safe_load(open(entry)), yaml.safe_load(open(installed))
+                  if any(got.get(k) != shipped[k] for k in ("name", "version", "hermes_requires")):
+                      errors.append("distribution.yaml was not installed as shipped")
+              elif os.path.isfile(entry) and not filecmp.cmp(entry, installed, shallow=False):
+                  errors.append(f"{entry} differs from the repo")
+          print("\n".join(errors) or "only the allowlisted paths arrived")
+          sys.exit(bool(errors))
+          PY
