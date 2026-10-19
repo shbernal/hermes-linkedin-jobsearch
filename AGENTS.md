@@ -6,7 +6,7 @@
 
 - Key documentation
   - [docs/adr/](docs/adr/README.md): the architecture decisions this repo implements
-  - `~/Work/job-search` is the source the skills are ported from. It is a private repo of personal data: port its logic, never its data.
+  - The skills are ported from the author's private job-search setup, which the implementation plan names. Port its logic, never its data.
 
 - Rules
   - Everything personal lives in the user's workspace (`criteria.md`, `workspace.yaml`, `profile/`). The skills contain no names, places, paths or caps.
