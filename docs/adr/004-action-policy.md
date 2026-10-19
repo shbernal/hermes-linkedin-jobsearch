@@ -17,6 +17,7 @@ The rules live in one place, the `autonomy:` block of `workspace.yaml`, and ever
 | Unsave or archive a job, archive a conversation | allowed, at most 5 a day | — |
 | `dismiss_ids` (hides a job from search for good) | off. Known jobs are deduplicated through `pipeline/skipped.md` | `dismiss_known_jobs: true` |
 | Archive email | off | offered during email setup |
+| atsfill `fill` and `send` (external forms) | blocked through `approvals.deny` in `config.yaml` | not in v1 |
 | `send_message`, `connect_with_person`, `reply_to_conversation` | excluded through `tools.exclude` on the LinkedIn server in `config.yaml` | not in v1 |
 
 Approval works from wherever the user reads the cron reports. The Advance run takes entries to `ready` and stops. It writes the numbered list of ready entries to `pipeline/ready.md`, and its report ends with the same list. The user replies in the same chat ("apply 1 and 3"), or says it in `jobsearch chat`, and the apply skill looks the numbers up in `pipeline/ready.md`.
@@ -28,4 +29,4 @@ A reply to a cron report reaches the profile's agent in the chat's normal sessio
 ## Consequences
 
 - The skills carry no caps or permissions of their own. A conflict between a skill and `workspace.yaml` is a bug in the skill.
-- The never-message rule is enforced by the tool exclusion, not only stated. It depends on the MCP servers living in `config.yaml` ([005](005-dependencies.md)).
+- The never-message and never-submit-externally rules are enforced by the tool exclusion and the deny rules, not only stated. It depends on the MCP servers living in `config.yaml` ([005](005-dependencies.md)).

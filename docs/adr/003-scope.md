@@ -26,9 +26,9 @@ v1 ships:
 
 Out of v1:
 
-- **The agent never fills or submits external forms.** prepare-application reads the form and writes the answers, and the user submits.
+- **The agent never fills or submits external forms.** prepare-application reads the form with `atsfill read` and writes the answers, and the user submits. atsfill's `fill` and `send` are blocked ([005](005-dependencies.md)).
 - **Welcome to the Jungle**, for both discovery and sending.
-- **atsfill.** Its `read` command is the planned replacement for the browser that reads forms.
+- **atsfill `fill` and `send`.**
 - **The hiring-forms MCP** from NEXT-ARCHITECTURE.
 - **outreach**, which was never run, and with it every message or connection request.
 - **freehire**, which no workflow uses yet.
@@ -37,4 +37,4 @@ Out of v1:
 ## Consequences
 
 - `apply.md` is reduced to an Easy Apply procedure and a hand-off. Its per-system sending notes are dropped. The few quirks needed to read a form go into a reference used by prepare-application.
-- The roadmap lists atsfill and WTTJ as the next steps, so it's clear they were left out on purpose.
+- The roadmap lists atsfill sending and WTTJ as the next steps, so it's clear they were left out on purpose.

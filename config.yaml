@@ -1,0 +1,24 @@
+terminal:
+  cwd: ~/jobsearch
+cron:
+  max_parallel_jobs: 1
+mcp_servers:
+  linkedin:
+    command: uvx
+    args:
+      - --from
+      - git+https://github.com/shbernal/linkedin-mcp-server@jobsearch-v1
+      - mcp-server-linkedin
+      - --transport
+      - stdio
+    tools:
+      exclude:
+        - send_message
+        - connect_with_person
+        - reply_to_conversation
+approvals:
+  deny:
+    - '*atsfill* send'
+    - '*atsfill* send *'
+    - '*atsfill* fill'
+    - '*atsfill* fill *'
