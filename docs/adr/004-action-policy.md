@@ -29,4 +29,5 @@ A reply to a cron report reaches the profile's agent in the chat's normal sessio
 ## Consequences
 
 - The skills carry no caps or permissions of their own. A conflict between a skill and `workspace.yaml` is a bug in the skill.
+- `SOUL.md` says that numbers in a reply refer to `pipeline/ready.md`: without it, the agent asks which list is meant.
 - The never-message and never-submit-externally rules are enforced by the tool exclusion and the deny rules, not only stated. It depends on the MCP servers living in `config.yaml` ([005](005-dependencies.md)).
