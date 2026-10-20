@@ -14,3 +14,5 @@ caps:
 
 ghosted_after_weeks: 8           # applied with no answer this long becomes ghosted
 company_hold_days: 30            # one live application per company; an unanswered one holds it this long
+
+reports: local                   # --deliver target of every cron job (telegram, discord, ...), set by init
