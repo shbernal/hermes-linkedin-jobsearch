@@ -28,7 +28,8 @@ skills/jobsearch-init/
     ├── pipeline/README.md
     ├── applications/README.md
     ├── companies/README.md
-    └── market/README.md
+    ├── market/README.md
+    └── archive/README.md
 ```
 
 1. `init.py` copies `template/` to `~/jobsearch`. It refuses if the target exists and is not empty. Then it runs `git init` and makes a first commit. If the user wants the data elsewhere, the skill creates it there and links `~/jobsearch` to it.

@@ -50,3 +50,18 @@ jobs:
           print("\n".join(errors) or "only the allowlisted paths arrived")
           sys.exit(bool(errors))
           PY
+
+      - name: Check that the shipped config matches what sync-config records
+        run: uv run -q skills/jobsearch-init/scripts/sync-config.py --config config.yaml --check
+
+      - name: Create a workspace from the installed template
+        env:
+          GIT_AUTHOR_NAME: ci
+          GIT_AUTHOR_EMAIL: ci@example.com
+          GIT_COMMITTER_NAME: ci
+          GIT_COMMITTER_EMAIL: ci@example.com
+        run: |
+          ws="$RUNNER_TEMP/ws"
+          uv run -q "$HERMES_HOME/profiles/jobsearch/skills/jobsearch-init/scripts/init.py" "$ws"
+          diff -r --exclude=.git skills/jobsearch-init/template "$ws"
+          test -z "$(git -C "$ws" status --porcelain)"
