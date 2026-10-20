@@ -15,7 +15,7 @@ Everything personal lives in the workspace. The distribution ships defaults and 
 - **`ball: user`** replaces the owner's name. The user's name comes from the profile facts, and is used in documents such as the PDF filename.
 - **No model in `config.yaml`.** The user's Hermes default applies. The README names the models it was tested with.
 - **No shipped cron jobs.** init creates Advance and Tracking, and add-track creates a discovery job and a weekly market job for each track, all with `hermes cron create`. Updates overwrite `deliver` and `workdir` on shipped jobs, so a shipped job would lose the user's delivery target on every update. The prompts name skills, so logic fixes still arrive with the skills.
-- **Reports** go to the messaging platform chosen during init, using the `--deliver` targets Hermes supports, or stay `local` when the user picks none.
+- **Reports** go to the messaging platform chosen during init, using the `--deliver` targets Hermes supports, or stay `local` when the user picks none. The target is `reports` in `workspace.yaml`, which every `hermes cron create` reads.
 - **LinkedIn safety:** at most 3 tracks by default, the search pages per discovery run are capped in `workspace.yaml`, and the README warns about LinkedIn's terms. A real limit on call volume belongs in the MCP server.
 - **Profile facts** come from the user's LinkedIn profile, read through the MCP, and from a CV if they provide one. A short interview fills the gaps (the `resume-market-fit` approach). Every fact is a file under `profile/`, so the source check on resume lines keeps working.
 

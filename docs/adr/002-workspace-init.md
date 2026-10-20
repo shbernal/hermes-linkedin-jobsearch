@@ -17,6 +17,7 @@ skills/jobsearch-init/
 ├── SKILL.md              # the onboarding conversation
 ├── scripts/init.py       # copies the skeleton, git init, first commit
 ├── scripts/sync-config.py  # keeps the MCP entries of config.yaml current (005)
+├── scripts/preflight.py  # the check every skill runs first: schema_version, then sync-config --check
 └── template/             # the skeleton
     ├── AGENTS.md         # data layout, and where the playbooks live (the skills)
     ├── .gitignore
