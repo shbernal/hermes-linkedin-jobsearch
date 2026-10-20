@@ -4,7 +4,7 @@ Status: accepted
 
 ## Context
 
-This agent comes from a personal job-search setup that has been running daily. A later project of the same author takes a different approach to the same problem. This project solves it mainly through LinkedIn: LinkedIn search and Easy Apply, an agent that prepares every application, and a user who submits external forms themselves.
+This agent comes from a personal job-search setup that has been running daily. A later project of the same author takes a different approach to the same problem. This project solves it mainly through LinkedIn: LinkedIn search and Easy Apply, an agent that prepares every application, and atsfill for external forms.
 
 ## Decision
 
@@ -18,7 +18,7 @@ v1 ships:
 | Weekly report on what a track's postings ask for | analyze-market |
 | Company dossier, then shortlist or drop | research-company |
 | Tailored resume, answers and form reading | prepare-application |
-| Submit Easy Apply, hand external forms to the user | apply |
+| Submit Easy Apply and external forms at the level `autonomy` sets, or hand them to the user | apply |
 | Statuses from LinkedIn and, if set up, email | update-status |
 | Add a role family to search | add-track |
 | Resume writing and checks | resume skills |
@@ -26,9 +26,8 @@ v1 ships:
 
 Out of v1:
 
-- **The agent never fills or submits external forms.** prepare-application reads the form with `atsfill read` and writes the answers, and the user submits. atsfill's `fill` and `send` are blocked ([005](005-dependencies.md)).
-- **Welcome to the Jungle**, for both discovery and sending.
-- **atsfill `fill` and `send`.**
+- **Sending through anything but atsfill.** A form atsfill doesn't support is read with Hermes' browser and goes to the user.
+- **Welcome to the Jungle discovery.** WTTJ forms reached from LinkedIn are sent like any atsfill system.
 - **A hiring-forms MCP.**
 - **outreach**, which was never run, and with it every message or connection request.
 - **freehire**, which no workflow uses yet.
@@ -36,5 +35,6 @@ Out of v1:
 
 ## Consequences
 
-- apply is an Easy Apply procedure and a hand-off. The source's per-system sending notes are dropped, and the few quirks needed to read a form go into a reference used by prepare-application.
-- The roadmap lists atsfill sending and WTTJ as the next steps, so it's clear they were left out on purpose.
+- External sending is an opt-in ([004](004-action-policy.md)), and atsfill's own `submit` list picks the systems that may receive one.
+- apply handles atsfill's result statuses in general. The source's per-system sending notes are dropped: system quirks belong in atsfill.
+- The roadmap lists WTTJ discovery as the next step, so it's clear it was left out on purpose.

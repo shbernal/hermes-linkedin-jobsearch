@@ -5,7 +5,7 @@ description: Create or refresh a company dossier for a company with a new pipeli
 
 # Research company
 
-First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`. On any problem, stop and give the user its `problems` as they are.
+First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, unless it already passed in this session. On any problem, stop and give the user its `problems` as they are.
 
 A dossier refreshed in the last few days is reused as is.
 

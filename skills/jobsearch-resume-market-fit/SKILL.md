@@ -5,7 +5,7 @@ description: Talk through a track's market report with the user, presenting the 
 
 # Resume market fit
 
-First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`. On any problem, stop and give the user its `problems` as they are.
+First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, unless it already passed in this session. On any problem, stop and give the user its `problems` as they are.
 
 A conversation, not a report. It uses `market/<track>/report.md` to find experiences worth adding to `profile/`, and better ways to present the ones already there.
 

@@ -5,7 +5,7 @@ description: Set up a new job-search track, a role family searched on its own. R
 
 # Add a track
 
-First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`. On any problem, stop and give the user its `problems` as they are.
+First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, unless it already passed in this session. On any problem, stop and give the user its `problems` as they are.
 
 `tracks/README.md` says what a track is and owns, and gives the file format. This is a conversation: stop at each decision below and let the user make it.
 

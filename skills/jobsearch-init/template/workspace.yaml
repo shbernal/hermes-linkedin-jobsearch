@@ -2,12 +2,15 @@ schema_version: 1
 
 # Outside actions. Anything not allowed here waits for the user's approval.
 autonomy:
-  unattended_easy_apply: false   # true: Advance submits Easy Apply without asking, up to max_sends_per_day
+  # Sending an application. off: the agent prepares it and the user submits. approval: the agent
+  # submits once the user names the entry. unattended: Advance submits on its own, within max_sends_per_day.
+  easy_apply: approval           # off | approval | unattended
+  external_forms: off            # off | approval | unattended, through atsfill on the systems its submit list names
   dismiss_known_jobs: false      # true: dismiss_ids hides known jobs from LinkedIn search for good
   archive_email: false           # true: tracking archives application email once it is handled
 
 caps:
-  max_sends_per_day: 2           # applications sent, attended or not
+  max_sends_per_day: 2           # applications sent, Easy Apply and external forms, attended or not
   max_close_outs_per_day: 5      # unsave, archive job, archive conversation on LinkedIn
   max_search_pages_per_run: 20   # LinkedIn search result pages one discovery run may read
   max_tracks: 3

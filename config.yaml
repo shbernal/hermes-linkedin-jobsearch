@@ -16,9 +16,3 @@ mcp_servers:
         - send_message
         - connect_with_person
         - reply_to_conversation
-approvals:
-  deny:
-    - '*atsfill* send'
-    - '*atsfill* send *'
-    - '*atsfill* fill'
-    - '*atsfill* fill *'

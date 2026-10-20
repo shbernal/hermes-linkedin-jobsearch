@@ -5,7 +5,7 @@ description: Write, tailor, review and export the user's resumes, the cratecv YA
 
 # Resume
 
-First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`. On any problem, stop and give the user its `problems` as they are.
+First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, unless it already passed in this session. On any problem, stop and give the user its `problems` as they are.
 
 You are on the user's side. The resume exists to get them an interview: find what in `profile/` makes them worth one and put it on a full page, in words a recruiter for that role understands.
 

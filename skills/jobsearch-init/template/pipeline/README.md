@@ -45,7 +45,7 @@ Statuses:
 
 `history` dates every status the entry has held, `YYYY-MM-DD <status>`, and its last line matches `status`. Whoever changes `status` appends a line with the date the change happened, not the date it was recorded. Leaving `standby` is a line of its own.
 
-`ball` says who acts next and `## Next action` says what. Whoever changes an entry sets both. By default `new`, `shortlisted` and `ready` are the agent's, and `applied`, `interviewing` and `offer` the company's. A `ready` entry the agent can't send, such as an external form, is the user's. A `standby` entry belongs to whoever controls what resumes it. An entry leaves the default when something specific waits: a question only the user can settle, a form the tool refused, a reply to draft, an interview to prepare. An ended entry drops the field.
+`ball` says who acts next and `## Next action` says what. Whoever changes an entry sets both. By default `new`, `shortlisted` and `ready` are the agent's, and `applied`, `interviewing` and `offer` the company's. A `ready` entry the agent may not or can't send (its `autonomy` level is `off`, or atsfill doesn't support the form) is the user's. A `standby` entry belongs to whoever controls what resumes it. An entry leaves the default when something specific waits: a question only the user can settle, a form the tool refused, a reply to draft, an interview to prepare. An ended entry drops the field.
 
 Body sections: `## Fit` (why this score), `## Next action`, `## Activity` (dated one-liners: drafts ready, applied, interview). A status change names its source: `2026-09-21 rejected, email from the recruiter`.
 

@@ -5,7 +5,7 @@ description: Work out what one track's postings ask for and how its base resume 
 
 # Analyze market
 
-First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`. On any problem, stop and give the user its `problems` as they are.
+First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, unless it already passed in this session. On any problem, stop and give the user its `problems` as they are.
 
 Suggestions only use experience that is on the resume or recorded in `profile/`, never invented.
 
