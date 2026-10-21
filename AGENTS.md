@@ -3,9 +3,12 @@
 - Key commands
   - `hermes profile install ./ --name jobsearch-test --alias -y` installs the working tree as a test profile
   - `hermes profile update jobsearch-test` picks up local changes
+  - `uv run skills/jobsearch-init/scripts/sync-config.py --config config.yaml --check` checks that `config.yaml` carries the LinkedIn server the init skill records (also run by CI)
+  - A fork bump: tag the fork `jobsearch-v<n>`, update `LINKEDIN` in `sync-config.py` and `config.yaml`, release the distribution
 
 - Key documentation
   - [docs/adr/](docs/adr/README.md): the architecture decisions this repo implements
+  - [ROADMAP.md](ROADMAP.md) for what is tested and next, [CHANGELOG.md](CHANGELOG.md) for version bumps
   - The skills are ported from the author's private job-search setup, which the implementation plan names. Port its logic, never its data.
 
 - Rules
