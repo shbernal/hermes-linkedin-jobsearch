@@ -17,7 +17,7 @@ The `autonomy:` and `caps:` blocks of `workspace.yaml` are the only permissions.
 
 ## Git
 
-Before writing, record `git status --short` and leave every change already there as it was. Stage the run's files by path, never `git add .` or `-A`. Review the staged diff and commit with a subject that says what changed and doesn't contain `cron`, `run`, `phase` or `step`. No empty commit. A commit that fails goes under `Failed`.
+Before writing, record `git status --short` and leave every change already there as it was, except the files of an entry this run works (its pipeline entry, company dossier and application folder): an interrupted run left those, and this run takes them up and commits them. Stage the run's files by path, never `git add .` or `-A`. Review the staged diff and commit with a subject that says what changed and doesn't contain `cron`, `run`, `phase` or `step`. No empty commit. A commit that fails goes under `Failed`.
 
 ## Report
 

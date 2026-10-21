@@ -18,7 +18,7 @@ A status changes only on evidence, and its Activity line names the source: `2026
 
 ## Steps
 
-1. Email, only when the himalaya skill is loaded and `himalaya account list` shows an account. Otherwise this run is LinkedIn only, and the report says so once. Following the himalaya skill, one `envelope search` over the inbox per open entry, since its drafts were ready, matching the company across `subject`, `body` and `from`: hiring systems send from their own domains with the company in the subject or body. Read the matches.
+1. Email, only when the himalaya skill is loaded and `himalaya account list` shows an account. Otherwise this run is LinkedIn only, and the report says so once, outside `Failed`. Following the himalaya skill, one `envelope search` over the inbox per open entry, since its drafts were ready, matching the company across `subject`, `body` and `from`: hiring systems send from their own domains with the company in the subject or body. Read the matches.
 2. LinkedIn:
    - `get_saved_jobs` with `stage: applied`, once, for the `ready` entries. Raise `max_pages` when an old application is missing from the first pages.
    - `get_inbox`, then `get_conversation` on threads with recruiters, tracked companies or people from the dossiers. A new inbound opportunity gets a pipeline entry with `source: linkedin-inbound` at `new`.
