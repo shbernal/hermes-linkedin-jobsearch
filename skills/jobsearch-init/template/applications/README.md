@@ -7,6 +7,7 @@ Drafts for one application, named like its pipeline file.
 - `resume.yaml`: a full copy of the track's base resume from `resumes/`, tailored to the offer.
 - The exported PDF, gitignored. The pipeline Activity line records how it was rendered, so it can be rebuilt.
 - `answers.md`: every question on the form, answered.
+- `answers.json`: atsfill's `{field id: value}` map, external forms only, written from `answers.md` before each fill or send.
 - `fit-interview-prep.md`: the HR or motivation round, for a non-technical interviewer: motivation and plain-language stories, no jargon.
 - `technical-interview-prep.md`: the role itself, its tools and concepts, technical evidence and gaps.
 - `interviews/YYYY-MM-DD-<round>.srt`: the user's transcript of one interview. `<round>` is `recruiter`, `hiring-manager`, `technical`, `case` or `founder`, with a suffix (`-2`) for a second round the same day. The next round's prep reads it.
@@ -21,7 +22,7 @@ Form: <easy apply | hiring system + URL | account required + URL | pasted by the
 <LinkedIn job URL, easy apply only>
 
 ## <question, verbatim>
-<field type> · <required | optional> · <options or character limit>
+<field type> · <required | optional> · <options or character limit> · <atsfill field id, external forms only>
 Answer:
 <the answer, one line>
 <justification, one line, only when the answer is a judgment call>
