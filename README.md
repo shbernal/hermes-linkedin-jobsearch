@@ -67,7 +67,7 @@ This creates a `jobsearch` profile and a `jobsearch` command next to your other 
 Setup logs in to LinkedIn, builds your profile facts from LinkedIn and your CV, interviews you for your criteria, sets what may be sent without asking, creates a first track and schedules the jobs.
 It can stop at any step: running it again picks up where it left off.
 
-Tested with `gpt-5.6-sol` through the `openai-codex` provider.
+Tested with `gpt-5.6-sol` through the `openai-codex` provider, and `glm-5.3` through `zai` on the Z.ai coding plan.
 
 ## What it never does on its own
 
