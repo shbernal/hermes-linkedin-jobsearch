@@ -19,7 +19,7 @@ Get the role family in the user's words and pick a kebab-case slug. Read `criter
 
 Find what employers call the role and what they ask for, in about 8 searches and 10 postings read.
 
-- `search_jobs` with each candidate title, in the query shapes jobsearch-discover builds from `criteria.md`, with `date_posted: past_month` and `max_pages: 1`. Include titles in every working language `criteria.md` lists. The result titles show which keyword returns the role and which returns noise.
+- `search_jobs` with each candidate title, built as step 2 of jobsearch-discover builds them from `criteria.md` (place in the keywords, no search filters), with `date_posted: past_month` and `max_pages: 1`. Include titles in every working language `criteria.md` lists. The result titles show which keyword returns the role and which returns noise.
 - `get_job_details` on the postings that look like the role: salary, years asked, the tools named, recurring duties, the words employers use.
 
 Report a table of titles: what each covers, examples, whether it's worth a keyword. The user picks the keywords and exclusions.

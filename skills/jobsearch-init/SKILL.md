@@ -5,7 +5,7 @@ description: Set up the job-search agent for a new user, or finish a setup that 
 
 # Set up the job search
 
-A conversation, run once. Every step first checks whether it's already done and skips if so, so a second run picks up where the first stopped. Never install, log in or write outside the workspace without the user's yes. `<profile>` below is this profile's home, `$HERMES_HOME`.
+A conversation, run once. Every step first checks whether it's already done and skips if so, so a second run picks up where the first stopped. Never install a tool or open a login without the user's yes. `<profile>` below is this profile's home, `$HERMES_HOME`.
 
 ## 1. Model
 
@@ -33,7 +33,7 @@ HERMES_HOME=<profile> npx skills add shbernal/cratecv --skill cratecv -g -a herm
 
 ## 6. LinkedIn
 
-Run the `linkedin` server's command and args from `<profile>/config.yaml` with `--transport stdio` replaced by `--login`. It opens a browser where the user signs in. Then call `get_person_profile` on the user. It works when it returns their profile, and that output feeds step 8.
+Run the `linkedin` server's command and args from `<profile>/config.yaml` with `--transport stdio` replaced by `--status`. When the session isn't valid, the same command with `--login` opens a browser where the user signs in. If it can't open a window from here, give the user that command to run in their own terminal. Then call `get_person_profile` on the user. It works when it returns their profile, and that output feeds step 8.
 
 ## 7. Reports
 
