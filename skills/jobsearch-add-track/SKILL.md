@@ -45,9 +45,9 @@ Create both jobs with the delivery target in `reports` from `workspace.yaml`. Th
 
 ```bash
 hermes cron create "<discovery>" "Run jobsearch-discover for track <track>." \
-  --skill jobsearch-discover --name "Job discovery, <track>" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-discover --name "Job discovery, <track>" --workdir ~/jobsearch --deliver <reports>
 hermes cron create "<schedule>" "Run jobsearch-analyze-market for track <track>." \
-  --skill jobsearch-analyze-market --name "Market analysis, <track>" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-analyze-market --name "Market analysis, <track>" --workdir ~/jobsearch --deliver <reports>
 ```
 
 The market job runs Fridays, from 21:00 for the first track and 30 minutes after the latest existing one for the next. Check both with `hermes cron list`: schedule, workdir, delivery, enabled. Don't trigger a run without the user's go.

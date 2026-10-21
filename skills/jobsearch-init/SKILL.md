@@ -69,9 +69,9 @@ Skip a job `hermes cron list` already shows. Create both with the `reports` targ
 
 ```bash
 hermes cron create "0 10-20/2 * * *" "Run jobsearch-advance." \
-  --skill jobsearch-advance --name "Advance" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-advance --name "Advance" --workdir ~/jobsearch --deliver <reports>
 hermes cron create "30 6,14,22 * * *" "Run jobsearch-update-status for every open application." \
-  --skill jobsearch-update-status --name "Tracking" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-update-status --name "Tracking" --workdir ~/jobsearch --deliver <reports>
 ```
 
 Add `--skill himalaya` to Tracking when email is set up. Check all four jobs in `hermes cron list`. Don't trigger a run without the user's go.
