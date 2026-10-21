@@ -68,7 +68,7 @@ def atsfill_problems(workspace: dict) -> list[dict]:
         return []
     return [{
         "problem": f"{path} lets atsfill send to {submit} while autonomy.external_forms is off",
-        "fix": "tell the user: empty the submit list, or opt in to external sending in workspace.yaml",
+        "fix": "ask the user whether to empty the submit list or opt in to external sending in workspace.yaml, and change neither file before they answer",
     }]
 
 
