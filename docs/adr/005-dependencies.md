@@ -29,4 +29,3 @@ The source setup runs the LinkedIn MCP from a local checkout of a fork. It uses 
 
 - A release of this distribution depends on a tagged fork release. Bringing the fork's features upstream would remove that dependency. That is open, not planned.
 - `mise use -g github:shbernal/cratecv` has to be tested on a clean machine before the README promises it.
-- The himalaya skill was written for Himalaya 2.1.x, and mise currently installs 2.2.1.
