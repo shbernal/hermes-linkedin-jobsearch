@@ -11,14 +11,14 @@ A job-search agent for [Hermes](https://hermes-agent.nousresearch.com) that work
 
 ---
 
-[Install](#install) • [Quickstart](#quickstart) • [How it works](#how-it-works) • [Roadmap](ROADMAP.md)
+[Install](#install) • [Quickstart](#quickstart) • [How it works](#how-it-works)
 
 ---
 
 </div>
 
 > [!WARNING]
-> 0.x is not stable: skills, workspace layout and settings can change between releases. See the [roadmap](ROADMAP.md) for what is tested.
+> 0.x is not stable: skills, workspace layout and settings can change between releases.
 
 <!-- Demo placeholder: record a terminal session of `/jobsearch-init` reaching the first track, or a cron report ending with the numbered ready list. -->
 
@@ -109,7 +109,6 @@ LinkedIn access goes through a pinned [fork of linkedin-mcp-server](https://gith
 
 ## More
 
-- [Roadmap](ROADMAP.md): what is tested and what comes next
 - [Architecture decisions](docs/adr/README.md): workspace, scope, action policy, dependencies
 - [Changelog](CHANGELOG.md)
 

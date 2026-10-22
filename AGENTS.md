@@ -7,8 +7,9 @@
   - A fork bump: tag the fork `jobsearch-v<n>`, update `LINKEDIN` in `sync-config.py` and `config.yaml`, release the distribution
 
 - Key documentation
+  - [GLOSSARY.md](GLOSSARY.md): the domain terms. Use them, and avoid the words under `_Avoid_`
   - [docs/adr/](docs/adr/README.md): the architecture decisions this repo implements
-  - [ROADMAP.md](ROADMAP.md) for what is tested and next, [CHANGELOG.md](CHANGELOG.md) for version bumps
+  - [CHANGELOG.md](CHANGELOG.md) for version bumps
   - The skills are ported from the author's private job-search setup, which the implementation plan names. Port its logic, never its data.
 
 - Rules
@@ -17,8 +18,6 @@
   - Only the paths in `distribution_owned` reach a user's profile. Repo files (README, docs, CI) stay in the repo.
 
 - Iron Laws
-  - Tokens are expensive, state of the art models need minimal guidance, don't repeat yourself, don't babysit, don't be over-specific.
-  - AI-native project. All code is AI-generated.
-  - Minimal attention when model implements without errors, we document in more detail when model struggles.
-  - Do not expect the user to have read each line, don't lose him on the internals, give visibility on a higher-architectural level.
+  - State of the art AI models/harnesses need minimal guidance. Don't repeat yourself, don't babysit, don't be over-specific.
+  - Only document items here when model diverges repeatedly from expected behavior. Don't document behaviors implemented without errors.
   - No journaling: code comments / documentation describe current state, they don't carry a log of their own edit history.

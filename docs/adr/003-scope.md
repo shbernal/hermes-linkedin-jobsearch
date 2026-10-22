@@ -37,4 +37,3 @@ Out of v1:
 
 - External sending is an opt-in ([004](004-action-policy.md)), and atsfill's own `submit` list picks the systems that may receive one.
 - apply handles atsfill's result statuses in general. The source's per-system sending notes are dropped: system quirks belong in atsfill.
-- The roadmap lists WTTJ discovery as the next step, so it's clear it was left out on purpose.
