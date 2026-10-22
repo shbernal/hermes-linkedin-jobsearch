@@ -61,7 +61,7 @@ Skip when `tracks/` holds a track. Otherwise run the jobsearch-add-track skill. 
 
 ## 12. Email (optional)
 
-When the user wants it and `himalaya` is installed: `HERMES_HOME=<profile> npx skills add shbernal/skills --skill himalaya -g -a hermes-agent --copy`, then the account setup the himalaya skill documents, with an app password or OAuth. Check that listing the inbox works. Ask whether tracking may archive application email once handled, and set `archive_email` to match.
+When the user wants it and `himalaya` is installed: `HERMES_HOME=<profile> npx skills add shbernal/skills --skill himalaya -g -a hermes-agent --copy`. Hermes bundles a himalaya skill for older versions, and when both are present neither loads by name: add a `himalaya` line to `<profile>/skills/.curator_suppressed` so Hermes never seeds its own, and delete `<profile>/skills/email/himalaya` if it is there. Then the account setup the himalaya skill documents, with an app password or OAuth. Check that listing the inbox works. Ask whether tracking may archive application email once handled, and set `archive_email` to match.
 
 ## 13. Advance and Tracking
 
