@@ -56,3 +56,5 @@ errors.log
 cron/*
 !cron/jobs.json
 skills/.*
+
+.claude/worktrees/
