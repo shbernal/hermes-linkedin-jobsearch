@@ -42,4 +42,4 @@ Hard filters a job must pass, then the points in its favor. Score 1 to 5 on what
 
 ## Resume
 
-How you like your resumes: sections, length, wording, what never appears. Guidance the agent follows unless an offer makes another choice better, and then says so. Each preference names its date.
+How you like your resumes: sections, length, wording, what never appears. Guidance the agent follows unless a posting makes another choice better, and then says so. Each preference names its date.

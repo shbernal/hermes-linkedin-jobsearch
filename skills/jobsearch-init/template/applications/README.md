@@ -4,7 +4,7 @@
 
 Drafts for one application, named like its pipeline file.
 
-- `resume.yaml`: a full copy of the track's base resume from `resumes/`, tailored to the offer.
+- `resume.yaml`: a full copy of the track's base resume from `resumes/`, tailored to the posting.
 - The exported PDF, gitignored. The pipeline Activity line records how it was rendered, so it can be rebuilt.
 - `answers.md`: every question on the form, answered.
 - `answers.json`: atsfill's `{field id: value}` map, external forms only, written from `answers.md` before each fill or send.
@@ -26,7 +26,7 @@ Form: <easy apply | hiring system + URL | account required + URL | pasted by the
 Answer:
 <the answer, one line>
 <justification, one line, only when the answer is a judgment call>
-Source: <profile files, criteria.md, company dossier, offer>
+Source: <profile files, criteria.md, company dossier, posting>
 ```
 
 - `Answer:` is alone on its line and the answer is the next line, so the user can copy it by line number.

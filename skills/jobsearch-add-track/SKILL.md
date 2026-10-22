@@ -28,7 +28,7 @@ Report a table of titles: what each covers, examples, whether it's worth a keywo
 
 Write `tracks/<track>.md`. Under `## Keywords`, list the titles left out and why, so later analyses don't research them again. Set `discovery` 30 minutes after the latest existing track's, or ask the user for a time when it's the first. Set `pages` so a run's searches fit `caps.max_search_pages_per_run`.
 
-Offers in another track's `market/` can belong here. Name them, and when the user agrees, move them to `market/<track>/offers/` and set `track` on their pipeline entries, in `archive/pipeline/` too.
+Postings in another track's `market/` can belong here. Name them, and when the user agrees, move them to `market/<track>/postings/` and set `track` on their pipeline entries, in `archive/pipeline/` too.
 
 ## 4. The base resume
 
@@ -36,7 +36,7 @@ Write `resumes/<track>.yaml` with the jobsearch-resume skill, from the positioni
 
 ## 5. Market
 
-- Postings read in step 2 that fall inside the new scope go through steps 4 and 5 of jobsearch-discover: an offer file, then a pipeline entry or a `skipped.md` row.
+- Postings read in step 2 that fall inside the new scope go through steps 4 and 5 of jobsearch-discover: a posting file, then a pipeline entry or a `skipped.md` row.
 - Write `market/<track>/report.md` as a first draft: the titles table, what recurs across postings, gaps against the profile, tailoring per family. Say that the first weekly analysis replaces it.
 
 ## 6. The scheduled jobs
@@ -54,4 +54,4 @@ The market job runs Fridays, from 21:00 for the first track and 30 minutes after
 
 ## 7. Report
 
-The keywords and exclusions, the resume and what's open on it, offers moved or created, and the jobs' schedules and first runs.
+The keywords and exclusions, the resume and what's open on it, postings moved or created, and the jobs' schedules and first runs.

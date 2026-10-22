@@ -6,7 +6,7 @@ A track is one role family searched on its own: its keywords, its base resume in
 
 - Frontmatter: `track`, `resume`, `discovery` (the cron schedule of its discovery job), `pages` (the result pages each search query may read, continuations included).
 - `## Keywords`: the titles searched, then the ones researched and left out, with why.
-- `## Families`: the sub-groups its market report counts. Every posting in `market/<track>/offers/` names one.
+- `## Families`: the sub-groups its market report counts. Every posting in `market/<track>/postings/` names one.
 - `## Fit`: points in favor on top of those in `criteria.md`.
 - `## Positioning`: what the resume argues, and the profile facts behind it.
 - `## Interviews`: what interviews for this track have asked, to prepare the next ones. Added after the first.

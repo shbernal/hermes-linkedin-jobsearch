@@ -112,5 +112,5 @@ _Avoid_: preflight (in prose), health check
 
 ## Flagged ambiguities
 
-- **Offer** means only the `offer` status, a job offer from the company. The job ad is a **posting**, even though the `market/<track>/offers/` folder keeps the older word.
+- **Offer** means only the `offer` status, a job offer from the company. The job ad is a **posting**, stored in `market/<track>/postings/`.
 - **Application** is the drafts folder, not the act of sending it, which is a **send**, nor the pipeline file, which is an **entry**.

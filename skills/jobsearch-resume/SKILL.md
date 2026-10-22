@@ -17,11 +17,11 @@ You are on the user's side. The resume exists to get them an interview: find wha
 | How the user likes their resumes | `## Resume` in `criteria.md` |
 | What a track's postings want | `market/<track>/report.md` |
 
-The preferences in `criteria.md` are followed unless an offer makes another choice better, and then the report says so. A preference the user states goes there, with its date.
+The preferences in `criteria.md` are followed unless a posting makes another choice better, and then the report says so. A preference the user states goes there, with its date.
 
 ## The loop
 
-1. Read the `profile/` files behind the entries you keep, the offer when there is one, and the preferences.
+1. Read the `profile/` files behind the entries you keep, the posting when there is one, and the preferences.
 2. Draft or edit the YAML.
 3. Run the value check below on every line.
 4. Run the layout check and fix what it finds, as the cratecv skill says.
@@ -33,7 +33,7 @@ Every line carries `source:`, a path relative to `profile/` or a list of them. T
 
 - The user's word is a source. A fact they give, or a line they ask to keep that nothing documents, goes into the matching profile file first, dated and attributed to them, and the line cites that file.
 - Never drop a line for lack of evidence without saying so. Small jobs leave no records: ask, take the answer, record it.
-- Don't invent. No number, tool, client, title or result that nobody stated. What the offer asks for and the profile lacks is reported as a gap.
+- Don't invent. No number, tool, client, title or result that nobody stated. What the posting asks for and the profile lacks is reported as a gap.
 - Earlier resume wording in a profile file is usable, but prefer what the user did. If you reuse a quote, confirm it with the user and move it into the body.
 
 ## Every line earns its place
@@ -63,7 +63,7 @@ One page, and empty space at the bottom is an argument not made. Aim for the las
 
 ## Tailoring and export
 
-To tailor for an offer, copy the track's base resume to `applications/<entry>/resume.yaml` and rework it for the offer and the track's market report.
+To tailor for a posting, copy the track's base resume to `applications/<entry>/resume.yaml` and rework it for the posting and the track's market report.
 
 Every cratecv command goes through the wrapper, which checks the sources first and resolves paths from the workspace:
 
@@ -78,6 +78,6 @@ ${HERMES_SKILL_DIR}/scripts/resume build <resume.yaml> -o "<dir>/<PDF name>.pdf"
 
 - the interpretations made, so the user can strike them
 - the lines resting on the user's word alone, and what was recorded in `profile/`
-- what the offer or market asks for that the profile doesn't cover
+- what the posting or market asks for that the profile doesn't cover
 - what was cut, and why
 - the questions that would most improve the page, ranked, five at most

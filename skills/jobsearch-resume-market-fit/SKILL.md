@@ -13,7 +13,7 @@ A conversation, not a report. It uses `market/<track>/report.md` to find experie
 
 Ask which track when the user doesn't name one. Read the report, `tracks/<track>.md`, its resume and `profile/`. Say so when the report is more than a week old.
 
-Rank the qualities by how often postings ask for them, then by how weak the evidence is: gaps and unconfirmed items first, then thin coverage (one line, a course, a side project where offers want real work). Well-covered qualities get only a quick check on wording.
+Rank the qualities by how often postings ask for them, then by how weak the evidence is: gaps and unconfirmed items first, then thin coverage (one line, a course, a side project where postings want real work). Well-covered qualities get only a quick check on wording.
 
 ## Discuss
 

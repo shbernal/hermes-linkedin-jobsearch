@@ -1,9 +1,9 @@
 # Architecture decisions
 
-- [001 Workspace location](001-workspace-location.md): always `~/jobsearch`, outside the Hermes profile, holding data only.
-- [002 Workspace init](002-workspace-init.md): a skeleton shipped in the init skill and copied by a script, with personal content filled in by talking to the user.
-- [003 Scope](003-scope.md): LinkedIn-centric and a product of its own. Easy Apply, and external forms through atsfill only.
-- [004 Action policy](004-action-policy.md): one `autonomy:` block, approval for Easy Apply and no external sending by default, and approval by replying to the cron report, resolved through `pipeline/ready.md`.
-- [005 Dependencies](005-dependencies.md): a `jobsearch-v<n>` fork tag configured in `config.yaml` and kept current by a sync script, atsfill as an unpinned dev release and no browser MCP, optional Himalaya, and cratecv binaries.
-- [006 Personalization](006-personalization.md): `criteria.md` and `workspace.yaml` hold everything personal, and the user owns every cron job.
-- [007 Distribution repo](007-distribution-repo.md): identity, file allowlist, public early after a scan, CI and versions.
+- [0001](0001-workspace-location.md): the workspace lives in `~/jobsearch`, outside the Hermes profile, holding data only.
+- [0002](0002-workspace-init.md): a script copies the skeleton shipped in the init skill, the agent fills in the personal content.
+- [0003](0003-scope.md): LinkedIn-centric and a product of its own. Easy Apply, and external forms through atsfill only.
+- [0004](0004-action-policy.md): one `autonomy:` block, approval for Easy Apply and no external sending by default, approval resolved through `pipeline/ready.md`.
+- [0005](0005-dependencies.md): a pinned `jobsearch-v<n>` LinkedIn fork kept current by a sync script, unpinned atsfill, no browser MCP.
+- [0006](0006-personalization.md): `criteria.md` and `workspace.yaml` hold everything personal, and the user owns every cron job.
+- [0007](0007-distribution-repo.md): public from the start, an explicit file allowlist, CI and versions.
