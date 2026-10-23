@@ -1,6 +1,6 @@
 ---
 name: jobsearch-update-status
-description: Bring every open application up to date from LinkedIn, the user's email when it's set up, and what the user says, then close out the entries that ended. Use for the Tracking run, or when the user reports news on an application ("I got rejected from Acme").
+description: Bring every open entry up to date from LinkedIn, the user's email when it's set up, and what the user says, then close out the entries that ended. Use for the Tracking run, or when the user reports news on an application ("I got rejected from Acme").
 ---
 
 # Update status

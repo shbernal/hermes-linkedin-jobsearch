@@ -28,7 +28,7 @@ You decide what gets sent.
 
 - Discovery per track: a role family with its own LinkedIn queries, fit scoring and base resume.
 - A company dossier for every new entry, then a shortlist or drop with the reason.
-- A resume and form answers per application, written from your profile facts, never invented.
+- A resume and form answers per entry, written from your profile facts, never invented.
 - Easy Apply sent once you name the entry. External forms are read and filled through [atsfill](https://github.com/shbernal/atsfill), and sent only if you opt in.
 - Status tracking from LinkedIn and, optionally, your email.
 - A weekly report on what each track's postings ask for.
@@ -103,7 +103,7 @@ Everything personal lives in `~/jobsearch`, a git repository the agent commits t
 The profile itself holds only the skills and the configuration, so `hermes profile update jobsearch` never touches your data.
 
 Scheduled runs report to the chat you choose during setup (Telegram, Discord, or the local log).
-An Advance report ends with the numbered list of ready applications, and you approve by replying to it.
+An Advance report ends with the numbered list of ready entries, and you approve by replying to it.
 
 LinkedIn access goes through a pinned [fork of linkedin-mcp-server](https://github.com/shbernal/linkedin-mcp-server) that adds Easy Apply and job close-out tools.
 

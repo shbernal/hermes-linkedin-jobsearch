@@ -61,8 +61,12 @@ The file in `companies/` describing one company, shared by all its entries.
 _Avoid_: company profile, research
 
 **Application**:
-The drafts folder in `applications/` for one entry: tailored resume, answers, interview prep.
+An entry once it has been sent, from `applied` on.
 _Avoid_: submission
+
+**Drafts**:
+The folder in `applications/` for one entry: tailored resume, answers, interview prep.
+_Avoid_: application (for the folder)
 
 **Ready list**:
 `pipeline/ready.md`, the numbered entries waiting for the user's go. Numbers in a reply refer to it.
@@ -79,7 +83,7 @@ _Avoid_: cooldown
 ## Sending
 
 **Send**:
-Submitting an application to the company, through Easy Apply or an external form. Counted against `max_sends_per_day`.
+Getting an entry's drafts to the company, through Easy Apply or an external form, which makes it an application. Counted against `max_sends_per_day`.
 _Avoid_: apply (as a verb for the act itself), submit
 
 **Easy Apply**:
@@ -113,4 +117,4 @@ _Avoid_: preflight (in prose), health check
 ## Flagged ambiguities
 
 - **Offer** means only the `offer` status, a job offer from the company. The job ad is a **posting**, stored in `market/<track>/postings/`.
-- **Application** is the drafts folder, not the act of sending it, which is a **send**, nor the pipeline file, which is an **entry**.
+- **Application** is a sent entry. Its folder in `applications/` is its **drafts**, the act of sending is a **send**, and an entry not yet sent is no application.

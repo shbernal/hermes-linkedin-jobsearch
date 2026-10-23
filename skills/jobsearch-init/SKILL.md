@@ -70,7 +70,7 @@ Skip a scheduled run `hermes cron list` already shows. Create both with the `rep
 ```bash
 hermes cron create "0 10-20/2 * * *" "Run jobsearch-advance." \
   --skill jobsearch-scheduled-run --skill jobsearch-advance --name "Advance" --workdir ~/jobsearch --deliver <reports>
-hermes cron create "30 6,14,22 * * *" "Run jobsearch-update-status for every open application." \
+hermes cron create "30 6,14,22 * * *" "Run jobsearch-update-status for every open entry." \
   --skill jobsearch-scheduled-run --skill jobsearch-update-status --name "Tracking" --workdir ~/jobsearch --deliver <reports>
 ```
 

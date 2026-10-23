@@ -17,6 +17,6 @@ A dossier refreshed in the last few days is reused as is.
 6. Settle each `new` entry at this company, with the reason on its Activity line and the dossier as the source:
    - The posting stopped taking applications: `closed`. Check this first, since nothing else matters once it's gone.
    - A hard filter from `criteria.md` that the dossier disproves: `dropped`.
-   - Otherwise `shortlisted`. A doubt the hard filters don't settle shortlists the entry and is reported, since an entry nobody acts on is worse than an application the user cancels.
+   - Otherwise `shortlisted`. A doubt the hard filters don't settle shortlists the entry and is reported, since an entry nobody acts on is worse than one the user drops.
 
    `closed` and `dropped` entries are closed out right away as `archive/README.md` says, LinkedIn close-outs within `caps.max_close_outs_per_day` and email archiving only when `autonomy.archive_email` allows it. When the research itself fails, the entry stays `new` and its Activity line says the run failed, so a later run can tell it from a settled one.

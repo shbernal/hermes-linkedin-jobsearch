@@ -9,10 +9,10 @@ A job-search workspace. The files are the state: every step writes markdown here
 | `tracks/` | one file per role family searched |
 | `resumes/` | one base resume per track, cut from `profile/` |
 | `pipeline/` | one file per entry, plus `skipped.md` and `ready.md` |
-| `applications/` | drafts per application |
+| `applications/` | drafts per entry |
 | `companies/` | one dossier per company |
 | `market/` | postings read per track, and what they ask for |
-| `archive/` | ended pipeline entries and their applications |
+| `archive/` | ended pipeline entries and their drafts |
 
 Each folder's README gives its file format. Slugs are lowercase kebab-case, dates ISO (`2026-09-13`), frontmatter YAML.
 

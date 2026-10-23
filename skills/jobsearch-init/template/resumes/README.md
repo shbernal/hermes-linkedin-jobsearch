@@ -1,6 +1,6 @@
 # Resumes
 
-`<track>.yaml`: the base resume for one track, in cratecv's YAML format, cut from `profile/`. Every application in the track starts from a copy of it in `applications/`.
+`<track>.yaml`: the base resume for one track, in cratecv's YAML format, cut from `profile/`. Every tailored resume in the track starts from a copy of it in `applications/`.
 
 Every detail line carries `source:`, the `profile/` file it comes from, relative to `profile/`:
 

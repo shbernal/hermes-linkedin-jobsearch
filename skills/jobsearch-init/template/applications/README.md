@@ -2,7 +2,7 @@
 
 ## `<company-slug>--<role-slug>/`
 
-Drafts for one application, named like its pipeline file.
+Drafts for one entry, named like its pipeline file.
 
 - `resume.yaml`: a full copy of the track's base resume from `resumes/`, tailored to the posting.
 - The exported PDF, gitignored. The pipeline Activity line records how it was rendered, so it can be rebuilt.

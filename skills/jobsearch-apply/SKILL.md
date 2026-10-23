@@ -1,6 +1,6 @@
 ---
 name: jobsearch-apply
-description: Send a ready application through Easy Apply or atsfill at the level workspace.yaml allows, or hand it to the user, and record what went out. Use when the user says "apply <n>" or "sent <entry>", or an Advance run may send unattended.
+description: Send a ready entry through Easy Apply or atsfill at the level workspace.yaml allows, or hand it to the user, and record what went out. Use when the user says "apply <n>" or "sent <entry>", or an Advance run may send unattended.
 ---
 
 # Apply
