@@ -80,14 +80,14 @@ _Avoid_: queue, shortlist
 Ending an entry: archiving its files and tidying its LinkedIn job, conversations and emails.
 _Avoid_: cleanup
 
-**Company hold**:
-The rule that one live application per company pauses the others in `standby`.
-_Avoid_: cooldown
+**Employer hold**:
+The rule that an employer gets one live application at a time: its other entries wait in `standby` until it answers or `days_before_reapplying_to_unanswered_employer` pass.
+_Avoid_: company hold, cooldown
 
 ## Sending
 
 **Send**:
-Getting an entry's drafts to the company, through Easy Apply or an external form, which makes it an application. Counted against `max_sends_per_day`.
+Getting an entry's drafts to the company, through Easy Apply or an external form, which makes it an application. Counted against `max_applications_sent_per_day`.
 _Avoid_: apply (as a verb for the act itself), submit
 
 **Easy Apply**:
@@ -104,7 +104,7 @@ _Avoid_: test run, preview
 ## Runs
 
 **Scheduled run**:
-A cron job of the profile, run with nobody there to approve or answer. Its report goes to the `reports` target.
+A cron job of the profile, run with nobody there to approve or answer. Its report goes to the `report_delivery_target`.
 _Avoid_: cron, job
 
 **Advance**:

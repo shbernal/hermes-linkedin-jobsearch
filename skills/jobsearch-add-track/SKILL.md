@@ -26,7 +26,7 @@ Report a table of titles: what each covers, examples, whether it's worth a keywo
 
 ## 3. The track file
 
-Write `tracks/<track>.md`. Under `## Keywords`, list the titles left out and why, so later analyses don't research them again. Set `discovery` 30 minutes after the latest existing track's, or ask the user for a time when it's the first. Set `pages` so a run's searches fit `max_search_pages_per_run`.
+Write `tracks/<track>.md`. Under `## Keywords`, list the titles left out and why, so later analyses don't research them again. Set `discovery` 30 minutes after the latest existing track's, or ask the user for a time when it's the first. Set `pages` so a run's searches fit `max_search_pages_per_discovery_run`.
 
 Postings in another track's `market/` can belong here. Name them, and when the user agrees, move them to `market/<track>/postings/` and set `track` on their pipeline entries, in `archive/pipeline/` too.
 
@@ -41,13 +41,13 @@ Write `resumes/<track>.yaml` with the jobsearch-resume skill, from the positioni
 
 ## 6. The scheduled jobs
 
-Create both scheduled runs with the delivery target in `reports` from `workspace.yaml`. Their prompts name the skill and the track and nothing else, since the rules live in the skills:
+Create both scheduled runs with `report_delivery_target` from `workspace.yaml`. Their prompts name the skill and the track and nothing else, since the rules live in the skills:
 
 ```bash
 hermes cron create "<discovery>" "Run jobsearch-discover for track <track>." \
-  --skill jobsearch-scheduled-run --skill jobsearch-discover --name "Job discovery, <track>" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-discover --name "Job discovery, <track>" --workdir ~/jobsearch --deliver <report_delivery_target>
 hermes cron create "<schedule>" "Run jobsearch-analyze-market for track <track>." \
-  --skill jobsearch-scheduled-run --skill jobsearch-analyze-market --name "Market report, <track>" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-analyze-market --name "Market report, <track>" --workdir ~/jobsearch --deliver <report_delivery_target>
 ```
 
 The market report run goes Fridays, from 21:00 for the first track and 30 minutes after the latest existing one for the next. Check both with `hermes cron list`: schedule, workdir, delivery, enabled. Don't trigger a run without the user's go.

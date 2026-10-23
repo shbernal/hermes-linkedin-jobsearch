@@ -4,15 +4,15 @@ The source setup stated its rule on outside actions in four contradicting places
 
 | Action | Default | Opt-in |
 |---|---|---|
-| Send Easy Apply | `easy_apply: approval` | `off` or `unattended` |
+| Send Easy Apply | `linkedin_easy_apply: approval` | `off` or `unattended` |
 | Send an external form through atsfill | `external_forms: off` | `approval` or `unattended` |
 | Dry runs (Easy Apply during prepare, `atsfill fill`) | allowed | — |
 | Unsave or archive a job, archive a conversation | allowed, limited per day | — |
-| `dismiss_ids` (hides a job from search for good) | off, known jobs deduplicated through `pipeline/skipped.md` | `dismiss_known_jobs: true` |
+| `dismiss_ids` (hides a job from search for good) | off, known jobs deduplicated through `pipeline/skipped.md` | `hide_known_jobs_from_linkedin_search: true` |
 | Archive email | off | offered during email setup |
 | `send_message`, `connect_with_person`, `reply_to_conversation` | excluded through `tools.exclude` in `config.yaml` | not in v1 |
 
-`off` means the user sends it and "sent <entry>" marks it applied, `approval` sends once the user names the entry, `unattended` lets Advance send on its own. `max_sends_per_day` is one budget for both kinds of form.
+`off` means the user sends it and "sent <entry>" marks it applied, `approval` sends once the user names the entry, `unattended` lets Advance send on its own. `max_applications_sent_per_day` is one budget for both kinds of form.
 
 ## Considered options
 

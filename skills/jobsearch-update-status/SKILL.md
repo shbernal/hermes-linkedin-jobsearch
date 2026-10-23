@@ -25,11 +25,11 @@ A status changes only on evidence, and its Activity line names the source: `2026
    - `get_job_details` only for `ready` entries still without evidence: its `apply` field reads `applied` or `closed`. Not `get_job_apply_url`, which leaves a "did you apply?" prompt on the posting.
 3. Update each entry as `pipeline/README.md` says: `status` and its `history` line, `ball`, `applied`, `updated`, an Activity line per event.
    - A closed posting with no evidence of applying becomes `closed`.
-   - `applied` for `ghosted_after_weeks` with no answer becomes `ghosted`.
-   - A `standby` entry whose company is free again under `company_hold_days` goes back to the status it left, `ball: agent`, with the reason. When several wait at one company, only the highest fit.
+   - `applied` for `weeks_without_answer_until_ghosted` with no answer becomes `ghosted`.
+   - A `standby` entry whose company is free again under `days_before_reapplying_to_unanswered_employer` goes back to the status it left, `ball: agent`, with the reason. When several wait at one company, only the highest fit.
    - Small work an event asks of the user, such as a reply, is drafted here and the entry goes to `ball: user`. Heavier work, such as interview prep, goes to `ball: agent` under `## Next action` for jobsearch-advance.
-4. Close out every entry that ended as `archive/README.md` says. On LinkedIn: `unsave_job` for a saved job, `archive_job` for one in the Applied tab, `archive_conversation` for a thread whose outcome is settled, with or without a pipeline entry. A thread that still expects a reply from the user stays. Count today's close-outs from the Activity lines against `max_close_outs_per_day`. Past it, they wait for the next run.
-5. Archive email only when `archive_email` is true: what needs nothing more from the user, such as receipts, rejections and automated updates. Anything that asks the user something stays in the inbox.
+4. Close out every entry that ended as `archive/README.md` says. On LinkedIn: `unsave_job` for a saved job, `archive_job` for one in the Applied tab, `archive_conversation` for a thread whose outcome is settled, with or without a pipeline entry. A thread that still expects a reply from the user stays. Count today's close-outs from the Activity lines against `max_linkedin_close_outs_per_day`. Past it, they wait for the next run.
+5. Archive email only when `archive_handled_emails` is true: what needs nothing more from the user, such as receipts, rejections and automated updates. Anything that asks the user something stays in the inbox.
 
 ## Report
 

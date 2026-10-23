@@ -34,14 +34,14 @@ Statuses:
 - `new`: found by discovery, not reviewed
 - `shortlisted`: researched and worth applying
 - `ready`: drafts in `applications/` done, waiting to be sent
-- `standby`: paused without dropping it. `## Next action` names what must happen before it resumes, and the Activity line that paused it names the status it left. Most often another application at the same company (`company_hold_days` in `workspace.yaml`)
+- `standby`: paused without dropping it. `## Next action` names what must happen before it resumes, and the Activity line that paused it names the status it left. Most often another application at the same company (`days_before_reapplying_to_unanswered_employer` in `workspace.yaml`)
 - `applied`
 - `interviewing`
 - `offer`
 - `rejected`: the company said no
 - `dropped`: the user or the agent said no, with the reason in the body
 - `closed`: the posting stopped taking applications before the user applied
-- `ghosted`: no answer `ghosted_after_weeks` after `applied`
+- `ghosted`: no answer `weeks_without_answer_until_ghosted` after `applied`
 
 `history` dates every status the entry has held, `YYYY-MM-DD <status>`, and its last line matches `status`. Whoever changes `status` appends a line with the date the change happened, not the date it was recorded. Leaving `standby` is a line of its own.
 

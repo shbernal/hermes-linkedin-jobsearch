@@ -37,7 +37,7 @@ Run the `linkedin` server's command and args from `<profile>/config.yaml` with `
 
 ## 7. Reports
 
-Ask which messaging platform gets the scheduled reports, among the `--deliver` targets in `hermes cron create --help`. None means `local`. A platform needs the gateway: point to `hermes gateway setup` for the connection and `hermes gateway install` so jobs run in the background, then check `hermes gateway status`. Write the choice to `reports` in `workspace.yaml`.
+Ask which messaging platform gets the scheduled reports, among the `--deliver` targets in `hermes cron create --help`. None means `local`. A platform needs the gateway: point to `hermes gateway setup` for the connection and `hermes gateway install` so scheduled runs go in the background, then check `hermes gateway status`. Write the choice to `report_delivery_target` in `workspace.yaml`.
 
 ## 8. Profile facts
 
@@ -51,9 +51,9 @@ Fill every section of `criteria.md` by interview, `## Resume` included, offering
 
 Explain each autonomy and limits setting in `workspace.yaml` in a line and ask:
 
-- `easy_apply` and `external_forms`: `off`, `approval` or `unattended`, and `max_sends_per_day`.
+- `linkedin_easy_apply` and `external_forms`: `off`, `approval` or `unattended`, and `max_applications_sent_per_day`.
 - When `external_forms` isn't `off`: run `uvx --prerelease allow atsfill@latest status`, offer every system it supports, and mark those only dry-run verified. Write the chosen systems to the `submit` list in atsfill's config (`status` prints its path). Offer `atsfill install-browser` (1.3 GB) when a chosen system needs the browser, and `atsfill login <system>` for each one that needs an account.
-- `dismiss_known_jobs`, and whether the default limits fit.
+- `hide_known_jobs_from_linkedin_search`, and whether the default limits fit.
 
 ## 11. First track
 
@@ -61,17 +61,17 @@ Skip when `tracks/` holds a track. Otherwise run the jobsearch-add-track skill. 
 
 ## 12. Email (optional)
 
-When the user wants it and `himalaya` is installed: `HERMES_HOME=<profile> npx skills add shbernal/skills --skill himalaya -g -a hermes-agent --copy`. Hermes bundles a himalaya skill for older versions, and when both are present neither loads by name: add a `himalaya` line to `<profile>/skills/.curator_suppressed` so Hermes never seeds its own, and delete `<profile>/skills/email/himalaya` if it is there. Then the account setup the himalaya skill documents, with an app password or OAuth. Check that listing the inbox works. Ask whether tracking may archive application email once handled, and set `archive_email` to match.
+When the user wants it and `himalaya` is installed: `HERMES_HOME=<profile> npx skills add shbernal/skills --skill himalaya -g -a hermes-agent --copy`. Hermes bundles a himalaya skill for older versions, and when both are present neither loads by name: add a `himalaya` line to `<profile>/skills/.curator_suppressed` so Hermes never seeds its own, and delete `<profile>/skills/email/himalaya` if it is there. Then the account setup the himalaya skill documents, with an app password or OAuth. Check that listing the inbox works. Ask whether tracking may archive application email once handled, and set `archive_handled_emails` to match.
 
 ## 13. Advance and Tracking
 
-Skip a scheduled run `hermes cron list` already shows. Create both with the `reports` target:
+Skip a scheduled run `hermes cron list` already shows. Create both with `report_delivery_target`:
 
 ```bash
 hermes cron create "0 10-20/2 * * *" "Run jobsearch-advance." \
-  --skill jobsearch-scheduled-run --skill jobsearch-advance --name "Advance" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-advance --name "Advance" --workdir ~/jobsearch --deliver <report_delivery_target>
 hermes cron create "30 6,14,22 * * *" "Run jobsearch-update-status for every open entry." \
-  --skill jobsearch-scheduled-run --skill jobsearch-update-status --name "Tracking" --workdir ~/jobsearch --deliver <reports>
+  --skill jobsearch-scheduled-run --skill jobsearch-update-status --name "Tracking" --workdir ~/jobsearch --deliver <report_delivery_target>
 ```
 
 Add `--skill himalaya` to Tracking when email is set up. Check all four scheduled runs in `hermes cron list`. Don't trigger a run without the user's go.
