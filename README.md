@@ -26,7 +26,7 @@ hermes-linkedin-jobsearch is a Hermes profile distribution.
 It installs an agent that searches LinkedIn on a schedule, researches the companies behind the postings, tailors a resume and answers for each one, and keeps track of every application.
 You decide what gets sent.
 
-- Discovery per track: a role family with its own LinkedIn queries, fit scoring and base resume.
+- Discovery per track: a kind of role with its own LinkedIn queries, fit scoring and base resume.
 - A company dossier for every new entry, then a shortlist or drop with the reason.
 - A resume and form answers per entry, written from your profile facts, never invented.
 - Easy Apply sent once you name the entry. External forms are read and filled through [atsfill](https://github.com/shbernal/atsfill), and sent only if you opt in.

@@ -27,7 +27,7 @@ _Avoid_: permissions, policy
 ## Search
 
 **Track**:
-One role family searched on its own, with its keywords, base resume, market data and cron jobs.
+One kind of role searched on its own, with its keywords, base resume, market data and scheduled runs.
 _Avoid_: search, role, campaign
 
 **Family**:
@@ -118,3 +118,4 @@ _Avoid_: preflight (in prose), health check
 
 - **Offer** means only the `offer` status, a job offer from the company. The job ad is a **posting**, stored in `market/<track>/postings/`.
 - **Application** is a sent entry. Its folder in `applications/` is its **drafts**, the act of sending is a **send**, and an entry not yet sent is no application.
+- **Family** is only the sub-group within a track. A track is a kind of role, not a "role family".

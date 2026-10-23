@@ -1,6 +1,6 @@
 ---
 name: jobsearch-add-track
-description: Set up a new job-search track, a role family searched on its own. Researches what the role is called on LinkedIn and what postings ask for, settles the keywords and a base resume with the user, writes the track and its first market report, and schedules its discovery and weekly market report runs. Use when the user wants to target a new kind of role, or asks to add or set up a track.
+description: Set up a new job-search track, a kind of role searched on its own. Researches what the role is called on LinkedIn and what postings ask for, settles the keywords and a base resume with the user, writes the track and its first market report, and schedules its discovery and weekly market report runs. Use when the user wants to target a new kind of role, or asks to add or set up a track.
 ---
 
 # Add a track
@@ -13,7 +13,7 @@ First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, u
 
 Count the tracks in `tracks/`, its README aside. At `caps.max_tracks` from `workspace.yaml`, refuse, and say that pausing or removing a track, or raising the cap, makes room.
 
-Get the role family in the user's words and pick a kebab-case slug. Read `criteria.md` and the existing tracks, and say so when the new role overlaps one, since a posting belongs to whichever track finds it first.
+Get the role in the user's words and pick a kebab-case slug. Read `criteria.md` and the existing tracks, and say so when the new role overlaps one, since a posting belongs to whichever track finds it first.
 
 ## 2. Research on LinkedIn
 

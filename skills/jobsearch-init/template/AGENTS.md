@@ -6,7 +6,7 @@ A job-search workspace. The files are the state: every step writes markdown here
 | Folder | Holds |
 | --- | --- |
 | `profile/` | every fact about the user, the only source for resume lines and form answers |
-| `tracks/` | one file per role family searched |
+| `tracks/` | one file per kind of role searched |
 | `resumes/` | one base resume per track, cut from `profile/` |
 | `pipeline/` | one file per entry, plus `skipped.md` and `ready.md` |
 | `applications/` | drafts per entry |
