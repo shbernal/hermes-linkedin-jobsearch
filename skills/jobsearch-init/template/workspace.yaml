@@ -2,8 +2,8 @@ schema_version: 1
 
 # Outside actions. Anything not allowed here waits for the user's approval.
 autonomy:
-  # Sending an application. off: the agent prepares it and the user submits. approval: the agent
-  # submits once the user names the entry. unattended: Advance submits on its own, within max_sends_per_day.
+  # Sending an application. off: the agent prepares it and the user sends it. approval: the agent
+  # sends once the user names the entry. unattended: Advance sends on its own, within max_sends_per_day.
   easy_apply: approval           # off | approval | unattended
   external_forms: off            # off | approval | unattended, through atsfill on the systems its submit list names
   dismiss_known_jobs: false      # true: dismiss_ids hides known jobs from LinkedIn search for good

@@ -38,7 +38,7 @@ How to answer recurring form questions. Each answer names its date.
 
 ## Fit
 
-Hard filters a job must pass, then the points in its favor. Score 1 to 5 on what's left: 3 is worth researching, 5 is worth acting on the same day.
+Hard filters a posting must pass, then the points in its favor. Score 1 to 5 on what's left: 3 is worth researching, 5 is worth acting on the same day.
 
 ## Resume
 

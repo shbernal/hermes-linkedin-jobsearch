@@ -1,10 +1,10 @@
 # Tracks
 
-A track is one role family searched on its own: its keywords, its base resume in `resumes/<track>.yaml`, its market data in `market/<track>/`, a discovery job and a weekly market job. Everything after discovery is shared: one `pipeline/`, one send cap, and a job id belongs to the track that found it first. `workspace.yaml` caps the number of tracks.
+A track is one role family searched on its own: its keywords, its base resume in `resumes/<track>.yaml`, its market data in `market/<track>/`, a discovery run and a weekly market report run. Everything after discovery is shared: one `pipeline/`, one send cap, and a posting belongs to the track that found it first. `workspace.yaml` caps the number of tracks.
 
 `<track>.md`:
 
-- Frontmatter: `track`, `resume`, `discovery` (the cron schedule of its discovery job), `pages` (the result pages each search query may read, continuations included).
+- Frontmatter: `track`, `resume`, `discovery` (the cron schedule of its discovery run), `pages` (the result pages each search query may read, continuations included).
 - `## Keywords`: the titles searched, then the ones researched and left out, with why.
 - `## Families`: the sub-groups its market report counts. Every posting in `market/<track>/postings/` names one.
 - `## Fit`: points in favor on top of those in `criteria.md`.

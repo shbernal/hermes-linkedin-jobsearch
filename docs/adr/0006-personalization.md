@@ -13,4 +13,4 @@ The source logic had its owner built in: name, city, tracks, cron times, model, 
 - Profile facts come from the user's LinkedIn profile, a CV if given, and a short interview, one file each under `profile/`. Without a CV, the first resume is only as good as the profile and the interview.
 - LinkedIn safety relies on defaults: at most 3 tracks, capped search pages per discovery run, and a warning in the README. A real limit on call volume belongs in the MCP server.
 - Skills contain no personal values, which the scan before going public ([0007](0007-distribution-repo.md)) checked.
-- Changing a cron schedule or prompt for existing users needs a migration, since their jobs are their own.
+- Changing a cron schedule or prompt for existing users needs a migration, since their scheduled runs are their own.

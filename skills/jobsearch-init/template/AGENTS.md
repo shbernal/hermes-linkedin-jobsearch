@@ -8,7 +8,7 @@ A job-search workspace. The files are the state: every step writes markdown here
 | `profile/` | every fact about the user, the only source for resume lines and form answers |
 | `tracks/` | one file per role family searched |
 | `resumes/` | one base resume per track, cut from `profile/` |
-| `pipeline/` | one file per opportunity, plus `skipped.md` and `ready.md` |
+| `pipeline/` | one file per entry, plus `skipped.md` and `ready.md` |
 | `applications/` | drafts per application |
 | `companies/` | one dossier per company |
 | `market/` | postings read per track, and what they ask for |

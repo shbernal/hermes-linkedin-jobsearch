@@ -2,7 +2,7 @@
 
 ## `<company-slug>--<role-slug>.md`
 
-One job opportunity.
+One entry: a posting the agent is pursuing.
 
 ```yaml
 ---
@@ -53,10 +53,10 @@ An entry that becomes `rejected`, `dropped`, `closed` or `ghosted` is closed out
 
 ## `skipped.md`
 
-Jobs discovery fetched and rejected, one table row each, so later runs skip the id without fetching it again. Postings dropped from the search result text alone aren't recorded.
+Postings discovery fetched and rejected, one table row each, so later runs skip the id without fetching it again. Postings dropped from the search result text alone aren't recorded.
 
 ```markdown
-# Skipped jobs
+# Skipped postings
 
 | Date | LinkedIn job id | Company | Title | Reason |
 |------|-----------------|---------|-------|--------|

@@ -21,4 +21,4 @@ Before writing, record `git status --short` and leave every change already there
 
 ## Report
 
-Exactly four sections: `Changed`, `Decisions`, `Failed`, `Next`. Every opportunity mentioned carries company, title, posted salary or `not disclosed`, fit and status, so the user can decide without opening the workspace. Every line carries news: a change, a question for the user, a failure, or an action someone takes next. Nothing gets a line for not moving. An empty section reads `None`, and when all four are `None` the whole reply is `[SILENT]`.
+Exactly four sections: `Changed`, `Decisions`, `Failed`, `Next`. Every entry mentioned carries company, title, posted salary or `not disclosed`, fit and status, so the user can decide without opening the workspace. Every line carries news: a change, a question for the user, a failure, or an action someone takes next. Nothing gets a line for not moving. An empty section reads `None`, and when all four are `None` the whole reply is `[SILENT]`.

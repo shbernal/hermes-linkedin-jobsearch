@@ -1,6 +1,6 @@
 # Archive
 
-Ended opportunities.
+Ended entries.
 
 - `pipeline/`: entries that became `rejected`, `dropped`, `closed` or `ghosted`, in the same format. Tracked in git, for the metrics.
 - `applications/`: their drafts folders. Gitignored.

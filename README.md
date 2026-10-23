@@ -20,7 +20,7 @@ A job-search agent for [Hermes](https://hermes-agent.nousresearch.com) that work
 > [!WARNING]
 > 0.x is not stable: skills, workspace layout and settings can change between releases.
 
-<!-- Demo placeholder: record a terminal session of `/jobsearch-init` reaching the first track, or a cron report ending with the numbered ready list. -->
+<!-- Demo placeholder: record a terminal session of `/jobsearch-init` reaching the first track, or a scheduled-run report ending with the numbered ready list. -->
 
 hermes-linkedin-jobsearch is a Hermes profile distribution.
 It installs an agent that searches LinkedIn on a schedule, researches the companies behind the postings, tailors a resume and answers for each one, and keeps track of every application.
@@ -73,8 +73,8 @@ Tested with `gpt-5.6-sol` through the `openai-codex` provider, and `glm-5.3` thr
 
 | Action | Default | You can change it to |
 | --- | --- | --- |
-| Submit Easy Apply | after you name the entry ("apply 1 and 3") | prepare only, or send unattended |
-| Submit an external form | never: you submit it yourself | after approval, or unattended |
+| Send Easy Apply | after you name the entry ("apply 1 and 3") | prepare only, or send unattended |
+| Send an external form | never: you send it yourself | after approval, or unattended |
 | Hide a job from LinkedIn search for good | never | on |
 | Archive email | never | on |
 | Message or connect with anyone | never: the tools are disabled | not available |

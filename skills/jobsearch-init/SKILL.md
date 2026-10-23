@@ -65,7 +65,7 @@ When the user wants it and `himalaya` is installed: `HERMES_HOME=<profile> npx s
 
 ## 13. Advance and Tracking
 
-Skip a job `hermes cron list` already shows. Create both with the `reports` target:
+Skip a scheduled run `hermes cron list` already shows. Create both with the `reports` target:
 
 ```bash
 hermes cron create "0 10-20/2 * * *" "Run jobsearch-advance." \
@@ -74,7 +74,7 @@ hermes cron create "30 6,14,22 * * *" "Run jobsearch-update-status for every ope
   --skill jobsearch-scheduled-run --skill jobsearch-update-status --name "Tracking" --workdir ~/jobsearch --deliver <reports>
 ```
 
-Add `--skill himalaya` to Tracking when email is set up. Check all four jobs in `hermes cron list`. Don't trigger a run without the user's go.
+Add `--skill himalaya` to Tracking when email is set up. Check all four scheduled runs in `hermes cron list`. Don't trigger a run without the user's go.
 
 ## 14. Commit and report
 

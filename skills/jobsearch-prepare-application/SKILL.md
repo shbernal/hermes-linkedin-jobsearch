@@ -7,7 +7,7 @@ description: Draft what a shortlisted pipeline entry needs to apply, a tailored 
 
 First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, unless it already passed in this session. On any problem, stop and give the user its `problems` as they are.
 
-The entry ends at `ready`, and the jobsearch-apply skill sends it. Reading a form never submits it, on LinkedIn or anywhere else.
+The entry ends at `ready`, and the jobsearch-apply skill sends it. Reading a form never sends it, on LinkedIn or anywhere else.
 
 1. Read the pipeline entry, its posting in `market/<track>/postings/`, the dossier in `companies/`, the family's section of `market/<track>/report.md`, `criteria.md` and `profile/`.
 2. An entry without `apply`, or `external` without `apply_url`, gets both from one `get_job_apply_url` call. `applied` or `closed` ends the run: report it. `unknown` on an open external posting is a tool failure, as SOUL.md says.
