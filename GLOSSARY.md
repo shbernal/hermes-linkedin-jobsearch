@@ -25,7 +25,7 @@ The settings in `workspace.yaml` that decide which outside actions the agent tak
 _Avoid_: permissions, policy
 
 **Limits**:
-The settings in `workspace.yaml` that bound how much of what autonomy allows happens: sends and close-outs per day, search pages per run, tracks.
+The settings in `workspace.yaml` that bound how much of what autonomy allows happens: sends and LinkedIn close-outs per day, search pages per run, tracks.
 _Avoid_: caps, quotas
 
 ## Search
