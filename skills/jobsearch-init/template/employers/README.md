@@ -1,13 +1,13 @@
-# Companies
+# Employers
 
 ## `<slug>.md`
 
-One dossier per company, shared by every pipeline entry at it.
+One dossier per employer, shared by every pipeline entry at it.
 
 ```yaml
 ---
 name: Acme
-linkedin: acme               # company_name for get_company_profile
+linkedin: acme               # LinkedIn company_name for get_company_profile
 website: https://acme.example
 stage: seed                  # pre-seed | seed | series-a | series-b | series-c+ | public | acquired | unknown
 headcount: 11-50

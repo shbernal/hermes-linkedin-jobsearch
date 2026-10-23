@@ -2,13 +2,13 @@
 
 What a track's postings ask for, so its resume can answer it.
 
-## `<track>/postings/<company-slug>--<role-slug>.md`
+## `<track>/postings/<employer-slug>--<role-slug>.md`
 
 One posting, as fetched. Discovery writes one for every posting inside the track's scope, skipped ones included. A posting with a pipeline entry shares its filename.
 
 ```yaml
 ---
-company: acme
+employer: acme
 title: Data Analyst
 family: product-analytics    # one of the track's families
 level: entry                 # internship | entry | associate | mid_senior | director | unknown

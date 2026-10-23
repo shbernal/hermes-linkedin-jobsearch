@@ -4,7 +4,7 @@ The agent comes from a personal setup that ran daily, and a later project by the
 
 ## Consequences
 
-v1 ships discover, analyze-market, research-company, prepare-application, apply, update-status, add-track, the resume skills and jobsearch-init. Left out on purpose:
+v1 ships discover, analyze-market, research-employer, prepare-application, apply, update-status, add-track, the resume skills and jobsearch-init. Left out on purpose:
 
 - Sending through anything but atsfill. A form atsfill doesn't support is read with Hermes' browser and goes to the user.
 - Welcome to the Jungle discovery. WTTJ forms reached from LinkedIn are sent like any atsfill system.

@@ -18,9 +18,9 @@ Your seniority, the LinkedIn experience levels to search, and the years of exper
 
 The languages you work in, with your level in each.
 
-## Companies
+## Employers
 
-The kinds of company you target and the ones you rule out, and any company you want watched by name.
+The kinds of employer you target and the ones you rule out, and any employer you want watched by name.
 
 ## Title exclusions
 

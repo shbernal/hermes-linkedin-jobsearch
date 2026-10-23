@@ -17,7 +17,7 @@ No entry to work on, and `pipeline/ready.md` unchanged: reply `[SILENT]`.
 
 Run what the status calls for, then look again, until the entry is no longer the agent's or has ended:
 
-- `new`: the jobsearch-research-company skill.
+- `new`: the jobsearch-research-employer skill.
 - `shortlisted`: the jobsearch-prepare-application skill. `ready` only once every draft it lists exists and checks.
 - `ready`: the jobsearch-apply skill when `workspace.yaml` sets this entry's kind (`linkedin_easy_apply` or `external_forms`) to `unattended`. Otherwise it stops here for the user.
 - Any other status: the work under `## Next action`, such as interview prep. What would go out to someone is drafted for the user.

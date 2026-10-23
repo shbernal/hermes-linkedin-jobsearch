@@ -10,7 +10,7 @@ A job-search workspace. The files are the state: every step writes markdown here
 | `resumes/` | one base resume per track, cut from `profile/` |
 | `pipeline/` | one file per entry, plus `skipped.md` and `ready.md` |
 | `applications/` | drafts per entry |
-| `companies/` | one dossier per company |
+| `employers/` | one dossier per employer |
 | `market/` | postings read per track, and what they ask for |
 | `archive/` | ended pipeline entries and their drafts |
 

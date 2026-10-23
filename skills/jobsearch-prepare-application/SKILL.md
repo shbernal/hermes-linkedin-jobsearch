@@ -9,7 +9,7 @@ First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, u
 
 The entry ends at `ready`, and the jobsearch-apply skill sends it. Reading a form never sends it, on LinkedIn or anywhere else.
 
-1. Read the pipeline entry, its posting in `market/<track>/postings/`, the dossier in `companies/`, the family's section of `market/<track>/report.md`, `criteria.md` and `profile/`.
+1. Read the pipeline entry, its posting in `market/<track>/postings/`, the dossier in `employers/`, the family's section of `market/<track>/report.md`, `criteria.md` and `profile/`.
 2. An entry without `apply`, or `external` without `apply_url`, gets both from one `get_job_apply_url` call. `applied` or `closed` ends the run: report it. `unknown` on an open external posting is a tool failure, as SOUL.md says.
 3. Tailor `applications/<entry>/resume.yaml` and export its PDF with the jobsearch-resume skill. When the export refuses a second page, cut the line that matters least for this posting and retry.
 4. Read the form's questions:

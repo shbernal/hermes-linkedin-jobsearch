@@ -1,4 +1,4 @@
-`hermes-linkedin-jobsearch`: a [Hermes Agent profile distribution](https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions) that installs a job-search agent built on LinkedIn. The agent finds postings, researches companies, tailors resumes, sends Easy Apply with approval and tracks applications. Users install it with `hermes profile install github.com/shbernal/hermes-linkedin-jobsearch --alias`.
+`hermes-linkedin-jobsearch`: a [Hermes Agent profile distribution](https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions) that installs a job-search agent built on LinkedIn. The agent finds postings, researches employers, tailors resumes, sends Easy Apply with approval and tracks applications. Users install it with `hermes profile install github.com/shbernal/hermes-linkedin-jobsearch --alias`.
 
 - Key commands
   - `hermes profile install ./ --name jobsearch-test --alias -y` installs the working tree as a test profile

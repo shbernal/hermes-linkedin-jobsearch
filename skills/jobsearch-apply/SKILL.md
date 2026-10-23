@@ -20,7 +20,7 @@ A sent application can't be taken back. "apply <n>" names entries by their numbe
 Before any send:
 
 - The applications already sent today, Easy Apply and external, counted from `applied` in `pipeline/` and `archive/pipeline/`, stay under `max_applications_sent_per_day`. Past it, the entry waits for tomorrow.
-- Another live entry at the same company within `days_before_reapplying_to_unanswered_employer`: set this one `standby` as `pipeline/README.md` says, and send nothing.
+- Another live entry at the same employer within `days_before_reapplying_to_unanswered_employer`: set this one `standby` as `pipeline/README.md` says, and send nothing.
 - `applications/<entry>/answers.md` and the PDF named on the Activity line are on disk. Missing either goes back to jobsearch-prepare-application.
 
 ## Easy Apply
@@ -41,7 +41,7 @@ The system's `submit_enabled` in `uvx --prerelease allow atsfill@latest status` 
 
 ## Recording a send
 
-Set `status: applied`, `applied` to the send date, its `history` line, `updated`, and an Activity line naming the evidence. Append `## Sent <date>` to `answers.md` with every field filled and the value it holds, from the read-back for an external form: LinkedIn shows a sent Easy Apply nowhere, so this is the only record of what the company read.
+Set `status: applied`, `applied` to the send date, its `history` line, `updated`, and an Activity line naming the evidence. Append `## Sent <date>` to `answers.md` with every field filled and the value it holds, from the read-back for an external form: LinkedIn shows a sent Easy Apply nowhere, so this is the only record of what the employer read.
 
 ## Hand-off
 

@@ -17,8 +17,8 @@ The autonomy and limits settings of `workspace.yaml` decide every outside action
 
 ## Git
 
-Before writing, record `git status --short` and leave every change already there as it was, except the files of an entry this run works (its pipeline entry, company dossier and drafts folder): an interrupted run left those, and this run takes them up and commits them. Stage the run's files by path, never `git add .` or `-A`. Review the staged diff and commit with a subject that says what changed and doesn't contain `cron`, `run`, `phase` or `step`. No empty commit. A commit that fails goes under `Failed`.
+Before writing, record `git status --short` and leave every change already there as it was, except the files of an entry this run works (its pipeline entry, employer dossier and drafts folder): an interrupted run left those, and this run takes them up and commits them. Stage the run's files by path, never `git add .` or `-A`. Review the staged diff and commit with a subject that says what changed and doesn't contain `cron`, `run`, `phase` or `step`. No empty commit. A commit that fails goes under `Failed`.
 
 ## Report
 
-Exactly four sections: `Changed`, `Decisions`, `Failed`, `Next`. Every entry mentioned carries company, title, posted salary or `not disclosed`, fit and status, so the user can decide without opening the workspace. Every line carries news: a change, a question for the user, a failure, or an action someone takes next. Nothing gets a line for not moving. An empty section reads `None`, and when all four are `None` the whole reply is `[SILENT]`.
+Exactly four sections: `Changed`, `Decisions`, `Failed`, `Next`. Every entry mentioned carries employer, title, posted salary or `not disclosed`, fit and status, so the user can decide without opening the workspace. Every line carries news: a change, a question for the user, a failure, or an action someone takes next. Nothing gets a line for not moving. An empty section reads `None`, and when all four are `None` the whole reply is `[SILENT]`.

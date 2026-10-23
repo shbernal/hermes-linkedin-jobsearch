@@ -23,11 +23,11 @@ A job-search agent for [Hermes](https://hermes-agent.nousresearch.com) that work
 <!-- Demo placeholder: record a terminal session of `/jobsearch-init` reaching the first track, or a scheduled-run report ending with the numbered ready list. -->
 
 hermes-linkedin-jobsearch is a Hermes profile distribution.
-It installs an agent that searches LinkedIn on a schedule, researches the companies behind the postings, tailors a resume and answers for each one, and keeps track of every application.
+It installs an agent that searches LinkedIn on a schedule, researches the employers behind the postings, tailors a resume and answers for each one, and keeps track of every application.
 You decide what gets sent.
 
 - Discovery per track: a kind of role with its own LinkedIn queries, fit scoring and base resume.
-- A company dossier for every new entry, then a shortlist or drop with the reason.
+- An employer dossier for every new entry, then a shortlist or drop with the reason.
 - A resume and form answers per entry, written from your profile facts, never invented.
 - Easy Apply sent once you name the entry. External forms are read and filled through [atsfill](https://github.com/shbernal/atsfill), and sent only if you opt in.
 - Status tracking from LinkedIn and, optionally, your email.
@@ -99,7 +99,7 @@ flowchart LR
     T["Tracking<br/>LinkedIn, email"] --> P
 ```
 
-Everything personal lives in `~/jobsearch`, a git repository the agent commits to: your criteria, profile facts, resumes, company dossiers and the pipeline.
+Everything personal lives in `~/jobsearch`, a git repository the agent commits to: your criteria, profile facts, resumes, employer dossiers and the pipeline.
 The profile itself holds only the skills and the configuration, so `hermes profile update jobsearch` never touches your data.
 
 Scheduled runs report to the chat you choose during setup (Telegram, Discord, or the local log).
