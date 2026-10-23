@@ -122,4 +122,5 @@ _Avoid_: preflight (in prose), health check
 
 - **Offer** means only the `offer` status, a job offer from the company. The job ad is a **posting**, stored in `market/<track>/postings/`.
 - **Application** is a sent entry. Its folder in `applications/` is its **drafts**, the act of sending is a **send**, and an entry not yet sent is no application.
+- **LinkedIn job** is LinkedIn's own record of a posting, the thing saved, archived or dismissed there. In the workspace it is a **posting**.
 - **Family** is only the sub-group within a track. A track is a kind of role, not a "role family".
