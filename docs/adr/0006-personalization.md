@@ -1,6 +1,6 @@
 # Everything personal lives in the workspace, and the user owns every cron job
 
-The source logic had its owner built in: name, city, tracks, cron times, model, messaging platform and standing answers. The distribution ships only defaults and the questions that fill them in: `criteria.md` holds what the user looks for and their standing answers, `workspace.yaml` holds `autonomy:` ([0004](0004-action-policy.md)), the caps, the ghosting window and the company hold, and `ball: user` replaces the owner's name.
+The source logic had its owner built in: name, city, tracks, cron times, model, messaging platform and standing answers. The distribution ships only defaults and the questions that fill them in: `criteria.md` holds what the user looks for and their standing answers, `workspace.yaml` holds autonomy ([0004](0004-action-policy.md)), the limits, the ghosting window and the company hold, and `ball: user` replaces the owner's name.
 
 ## Considered options
 

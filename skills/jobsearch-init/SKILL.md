@@ -49,11 +49,11 @@ Fill every section of `criteria.md` by interview, `## Resume` included, offering
 
 ## 10. Sending
 
-Explain each `autonomy` and `caps` setting in `workspace.yaml` in a line and ask:
+Explain each autonomy and limits setting in `workspace.yaml` in a line and ask:
 
 - `easy_apply` and `external_forms`: `off`, `approval` or `unattended`, and `max_sends_per_day`.
 - When `external_forms` isn't `off`: run `uvx --prerelease allow atsfill@latest status`, offer every system it supports, and mark those only dry-run verified. Write the chosen systems to the `submit` list in atsfill's config (`status` prints its path). Offer `atsfill install-browser` (1.3 GB) when a chosen system needs the browser, and `atsfill login <system>` for each one that needs an account.
-- `dismiss_known_jobs`, and whether the defaults for the other caps fit.
+- `dismiss_known_jobs`, and whether the default limits fit.
 
 ## 11. First track
 

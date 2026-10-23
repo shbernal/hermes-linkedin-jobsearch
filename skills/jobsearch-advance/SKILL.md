@@ -9,7 +9,7 @@ First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, u
 
 ## Selection
 
-Among the entries with `ball: agent`, finish what's started before opening anything new: furthest along first (`offer`, `interviewing`, `applied`, `ready`, `shortlisted`, then `new`), then highest fit, then oldest `updated`. Skip an entry whose Activity records a step that failed today, so a broken step waits a day instead of repeating each run, and a `ready` entry once today's sends reach `caps.max_sends_per_day`. When the entry stops on such a block, take the next one.
+Among the entries with `ball: agent`, finish what's started before opening anything new: furthest along first (`offer`, `interviewing`, `applied`, `ready`, `shortlisted`, then `new`), then highest fit, then oldest `updated`. Skip an entry whose Activity records a step that failed today, so a broken step waits a day instead of repeating each run, and a `ready` entry once today's sends reach `max_sends_per_day`. When the entry stops on such a block, take the next one.
 
 No entry to work on, and `pipeline/ready.md` unchanged: reply `[SILENT]`.
 
@@ -19,7 +19,7 @@ Run what the status calls for, then look again, until the entry is no longer the
 
 - `new`: the jobsearch-research-company skill.
 - `shortlisted`: the jobsearch-prepare-application skill. `ready` only once every draft it lists exists and checks.
-- `ready`: the jobsearch-apply skill when `autonomy` sets this entry's kind (`easy_apply` or `external_forms`) to `unattended`. Otherwise it stops here for the user.
+- `ready`: the jobsearch-apply skill when this entry's kind (`easy_apply` or `external_forms`) is `unattended` in `workspace.yaml`. Otherwise it stops here for the user.
 - Any other status: the work under `## Next action`, such as interview prep. What would go out to someone is drafted for the user.
 
 A failed step leaves the entry where it was, still the agent's, with an Activity line saying the step failed rather than what it would have found.

@@ -13,8 +13,8 @@
   - The skills are ported from the author's private job-search setup, which the implementation plan names. Port its logic, never its data.
 
 - Rules
-  - Everything personal lives in the user's workspace (`criteria.md`, `workspace.yaml`, `profile/`). The skills contain no names, places, paths or caps.
-  - Outside actions follow the `autonomy:` block in `workspace.yaml`. A skill never holds a permission of its own.
+  - Everything personal lives in the user's workspace (`criteria.md`, `workspace.yaml`, `profile/`). The skills contain no names, places, paths or limits.
+  - Outside actions follow the autonomy and limits settings in `workspace.yaml`. A skill never grants or bounds one of its own.
   - Only the paths in `distribution_owned` reach a user's profile. Repo files (README, docs, CI) stay in the repo.
   - No symlinks anywhere in the repo: the Hermes installer rejects the whole distribution, even for a link outside `distribution_owned`.
 

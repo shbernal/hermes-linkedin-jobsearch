@@ -5,7 +5,7 @@
 # ///
 """The check every jobsearch skill runs first: the workspace exists at the schema the skills expect,
 the profile's config matches this release (sync-config.py --check), and atsfill can't send while
-`autonomy.external_forms` is off.
+`external_forms` is off.
 
 Prints JSON with `problems`, each with a `fix`, and exits 1 when there is any.
 """
@@ -55,7 +55,7 @@ def atsfill_config() -> Path:
 
 
 def atsfill_problems(workspace: dict) -> list[dict]:
-    if ((workspace.get("autonomy") or {}).get("external_forms") or "off") != "off":
+    if (workspace.get("external_forms") or "off") != "off":
         return []
     path = atsfill_config()
     if not path.exists():
@@ -67,7 +67,7 @@ def atsfill_problems(workspace: dict) -> list[dict]:
     if not submit:
         return []
     return [{
-        "problem": f"{path} lets atsfill send to {submit} while autonomy.external_forms is off",
+        "problem": f"{path} lets atsfill send to {submit} while external_forms is off",
         "fix": "ask the user whether to empty the submit list or opt in to external sending in workspace.yaml, and change neither file before they answer",
     }]
 

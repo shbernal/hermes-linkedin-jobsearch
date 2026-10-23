@@ -11,7 +11,7 @@ First run `uv run ${HERMES_SKILL_DIR}/../jobsearch-init/scripts/preflight.py`, u
 
 ## 1. The role
 
-Count the tracks in `tracks/`, its README aside. At `caps.max_tracks` from `workspace.yaml`, refuse, and say that pausing or removing a track, or raising the cap, makes room.
+Count the tracks in `tracks/`, its README aside. At `max_tracks` from `workspace.yaml`, refuse, and say that pausing or removing a track, or raising the limit, makes room.
 
 Get the role in the user's words and pick a kebab-case slug. Read `criteria.md` and the existing tracks, and say so when the new role overlaps one, since a posting belongs to whichever track finds it first.
 
@@ -26,7 +26,7 @@ Report a table of titles: what each covers, examples, whether it's worth a keywo
 
 ## 3. The track file
 
-Write `tracks/<track>.md`. Under `## Keywords`, list the titles left out and why, so later analyses don't research them again. Set `discovery` 30 minutes after the latest existing track's, or ask the user for a time when it's the first. Set `pages` so a run's searches fit `caps.max_search_pages_per_run`.
+Write `tracks/<track>.md`. Under `## Keywords`, list the titles left out and why, so later analyses don't research them again. Set `discovery` 30 minutes after the latest existing track's, or ask the user for a time when it's the first. Set `pages` so a run's searches fit `max_search_pages_per_run`.
 
 Postings in another track's `market/` can belong here. Name them, and when the user agrees, move them to `market/<track>/postings/` and set `track` on their pipeline entries, in `archive/pipeline/` too.
 

@@ -11,9 +11,9 @@ Nobody is there to approve a command or answer a question. Work from the workspa
 
 `execute_code`, `python -c` and Python heredocs are blocked. Read and enumerate files with the file tools, and call CLIs directly. Never loosen the approval policy to get around a block: report it under `Failed`.
 
-## Permissions
+## Autonomy and limits
 
-The `autonomy:` and `caps:` blocks of `workspace.yaml` are the only permissions. What they leave at `approval` or `off` waits for the user: the entry takes `ball: user` and the run says what it waits on. Replies, messages and anything else that would go out to someone are drafted, never sent.
+The autonomy and limits settings of `workspace.yaml` decide every outside action. What they leave at `approval` or `off` waits for the user: the entry takes `ball: user` and the run says what it waits on. Replies, messages and anything else that would go out to someone are drafted, never sent.
 
 ## Git
 

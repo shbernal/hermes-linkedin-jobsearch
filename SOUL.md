@@ -30,5 +30,5 @@ user to file: github.com/shbernal/linkedin-mcp-server/issues or
 github.com/shbernal/atsfill/issues, with the command or tool call, the system,
 and the result, leaving out the user's data, the company and the posting URL.
 
-Every other permission for outside actions lives in the `autonomy:` block of
-`~/jobsearch/workspace.yaml`. Protect personal and confidential information.
+Every other rule on outside actions lives in the autonomy and limits settings
+of `~/jobsearch/workspace.yaml`. Protect personal and confidential information.

@@ -1,6 +1,6 @@
 A job-search workspace. The files are the state: every step writes markdown here, the next one reads it, and git keeps the history.
 
-- Settings: `workspace.yaml` (what may happen without asking, caps, timings) and `criteria.md` (what you're looking for, standing answers, fit). There are no others.
+- Settings: `workspace.yaml` (autonomy, limits, timings) and `criteria.md` (what you're looking for, standing answers, fit). There are no others.
 - Playbooks live in the agent's `jobsearch-*` skills, not here.
 
 | Folder | Holds |

@@ -11,7 +11,7 @@ A sent application can't be taken back. "apply <n>" names entries by their numbe
 
 ## Who sends
 
-`autonomy.easy_apply` and `autonomy.external_forms` in `workspace.yaml` set each kind:
+`easy_apply` and `external_forms` in `workspace.yaml` set each kind:
 
 - `off`: hand-off.
 - `approval`: send when the user named the entry in this session.
@@ -19,7 +19,7 @@ A sent application can't be taken back. "apply <n>" names entries by their numbe
 
 Before any send:
 
-- The applications already sent today, Easy Apply and external, counted from `applied` in `pipeline/` and `archive/pipeline/`, stay under `caps.max_sends_per_day`. Past it, the entry waits for tomorrow.
+- The applications already sent today, Easy Apply and external, counted from `applied` in `pipeline/` and `archive/pipeline/`, stay under `max_sends_per_day`. Past it, the entry waits for tomorrow.
 - Another live entry at the same company within `company_hold_days`: set this one `standby` as `pipeline/README.md` says, and send nothing.
 - `applications/<entry>/answers.md` and the PDF named on the Activity line are on disk. Missing either goes back to jobsearch-prepare-application.
 

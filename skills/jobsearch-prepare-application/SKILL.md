@@ -19,5 +19,5 @@ The entry ends at `ready`, and the jobsearch-apply skill sends it. Reading a for
    - An apply link that ends on a 404 or "no longer available" page means the posting is gone: set `closed` and close it out as `archive/README.md` says.
    - What no tool could read, the user opens or pastes.
 5. Write `answers.md` as `applications/README.md` says, from `profile/` and the standing answers in `criteria.md`. Answer every question, including the ones nothing covers, since the send composes nothing of its own. A question that needs the user's call is answered with a proposal and the entry takes `ball: user` with that question under `## Next action`.
-6. Set `ready` with its `history` line and `updated`, and add an Activity line naming the PDF and the renderer from `cratecv --version`. A form atsfill doesn't support, or an `autonomy` level of `off` for its kind, makes it the user's (`ball: user`).
+6. Set `ready` with its `history` line and `updated`, and add an Activity line naming the PDF and the renderer from `cratecv --version`. A form atsfill doesn't support, or an autonomy level of `off` for its kind, makes it the user's (`ball: user`).
 7. Report the requirement gaps, the answers resting on a judgment call, and which lines to check first.

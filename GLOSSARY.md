@@ -21,8 +21,12 @@ _Avoid_: candidate data, background
 _Avoid_: preferences, filters
 
 **Autonomy**:
-The `autonomy:` block of `workspace.yaml`, the only place an outside action gets its permission.
+The settings in `workspace.yaml` that decide which outside actions the agent takes without the user's go. No skill grants one of its own.
 _Avoid_: permissions, policy
+
+**Limits**:
+The settings in `workspace.yaml` that bound how much of what autonomy allows happens: sends and close-outs per day, search pages per run, tracks.
+_Avoid_: caps, quotas
 
 ## Search
 

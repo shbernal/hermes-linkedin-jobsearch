@@ -1,6 +1,6 @@
 # Tracks
 
-A track is one kind of role searched on its own: its keywords, its base resume in `resumes/<track>.yaml`, its market data in `market/<track>/`, a discovery run and a weekly market report run. Everything after discovery is shared: one `pipeline/`, one send cap, and a posting belongs to the track that found it first. `workspace.yaml` caps the number of tracks.
+A track is one kind of role searched on its own: its keywords, its base resume in `resumes/<track>.yaml`, its market data in `market/<track>/`, a discovery run and a weekly market report run. Everything after discovery is shared: one `pipeline/`, one send limit, and a posting belongs to the track that found it first. `workspace.yaml` caps the number of tracks.
 
 `<track>.md`:
 
