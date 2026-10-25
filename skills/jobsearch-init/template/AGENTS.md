@@ -12,6 +12,7 @@ A job-search workspace. The files are the state: every step writes markdown here
 | `applications/` | drafts per entry |
 | `employers/` | one dossier per employer |
 | `market/` | postings read per track, and what they ask for |
+| `issues/` | failures of the tools and skills, drafted for upstream without personal data |
 | `archive/` | ended pipeline entries and their drafts |
 
 Each folder's README gives its file format. Slugs are lowercase kebab-case, dates ISO (`2026-09-13`), frontmatter YAML.

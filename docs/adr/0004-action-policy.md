@@ -8,6 +8,7 @@ The source setup stated its rule on outside actions in four contradicting places
 | Send an external form through atsfill | `external_forms: off` | `approval` or `unattended` |
 | Dry runs (Easy Apply during prepare, `atsfill fill`) | allowed | — |
 | Unsave or archive a job, archive a conversation | allowed, limited per day | — |
+| File an issue for a tool or skill failure | `file_github_issues: off`, recorded in `issues/` with a prefilled link | `approval` or `unattended`, through `gh` |
 | `dismiss_ids` (hides a job from search for good) | off, known jobs deduplicated through `pipeline/skipped.md` | `hide_known_jobs_from_linkedin_search: true` |
 | Archive email | off | offered during email setup |
 | `send_message`, `connect_with_person`, `reply_to_conversation` | excluded through `tools.exclude` in `config.yaml` | not in v1 |
@@ -20,6 +21,7 @@ The source setup stated its rule on outside actions in four contradicting places
 
 ## Consequences
 
+- A missing autonomy setting is `off`, so a workspace from an older release never gains one on update.
 - Skills carry no autonomy or limits of their own. A conflict between a skill and `workspace.yaml` is a bug in the skill.
 - `SOUL.md` says that numbers in a reply refer to `pipeline/ready.md`.
 - The never-message rule is enforced by the tool exclusion, which depends on the MCP servers living in `config.yaml` ([0005](0005-dependencies.md)).

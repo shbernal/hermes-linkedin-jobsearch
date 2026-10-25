@@ -12,7 +12,7 @@ A distribution only copies files, so every dependency is either run through `uvx
 ## Considered options
 
 - **Browser MCPs** (the source setup ran four or five): a CLI printing one JSON document costs fewer tokens than page snapshots and keeps no process or browser profile. A system atsfill returns `unsupported` for is read with Hermes' built-in browser.
-- **Pinning atsfill**: hiring systems and their bot detection change fast, and a pin would hold users on adapters that stopped working. Tool failures are fixed upstream instead: the agent drafts an issue without the user's data and the user files it.
+- **Pinning atsfill**: hiring systems and their bot detection change fast, and a pin would hold users on adapters that stopped working. Tool failures are fixed upstream instead: the agent drafts an issue without the user's data, and files it when `file_github_issues` allows ([0004](0004-action-policy.md)).
 - **The upstream LinkedIn package**: lacks `submit_easy_apply`, `get_easy_apply_form`, `unsave_job`, `archive_job`, and the `start` and `dismiss_ids` parameters of `search_jobs`.
 - **A profile-root or plugin `mcp.json`**: the first is copied but never read, the second can't filter tools, which [0004](0004-action-policy.md) relies on. The servers live in `mcp_servers` of the shipped `config.yaml`, with `${userHome}` where a path is needed (Hermes doesn't expand `~` in MCP args).
 

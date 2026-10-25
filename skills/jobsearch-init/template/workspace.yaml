@@ -15,6 +15,13 @@ external_forms: off             # off | approval | unattended, on the systems at
 hide_known_jobs_from_linkedin_search: false   # true: dismiss_ids hides them for good
 archive_handled_emails: false                 # true: Tracking archives application emails it has handled
 
+# A failure in the LinkedIn tools, atsfill or this profile, recorded in issues/ without your data:
+#   off         recorded, with a link you can file it from
+#   approval    the agent asks, then files it
+#   unattended  the agent files it right away, so upstream fixes it sooner
+
+file_github_issues: off   # off | approval | unattended, the last two through gh
+
 
 # ── Limits ──────────────────────────────────────────────────────────────────
 # How much of what autonomy allows, attended or not.

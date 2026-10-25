@@ -118,6 +118,10 @@ The scheduled run that works the agent's furthest-along entry until the ball lea
 The scheduled run that updates statuses from LinkedIn and, if set up, email.
 _Avoid_: sync, status check
 
+**Issue record**:
+A file in `issues/` describing a failure of the LinkedIn tools, atsfill or the skills, drafted for the repo it belongs to and filed as `file_github_issues` allows.
+_Avoid_: bug report, ticket
+
 **Pre-run check**:
 `preflight.py`, run before each skill: workspace schema version and the LinkedIn server config.
 _Avoid_: preflight (in prose), health check

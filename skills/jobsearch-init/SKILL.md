@@ -21,7 +21,7 @@ Check PATH for `uv`, `node` with `npx`, `git` and `cratecv`, and ask whether the
 
 ## 4. Workspace
 
-Skip when `~/jobsearch/workspace.yaml` exists. Ask where the data should live. For `~/jobsearch`, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`. Elsewhere, run it with that path and then `ln -s <path> ~/jobsearch`. The skills always use `~/jobsearch`.
+When `~/jobsearch/workspace.yaml` exists, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`, which only adds the template files the workspace lacks. Otherwise ask where the data should live. For `~/jobsearch`, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`. Elsewhere, run it with that path and then `ln -s <path> ~/jobsearch`. The skills always use `~/jobsearch`.
 
 ## 5. Skills
 
@@ -53,6 +53,7 @@ Explain each autonomy and limits setting in `workspace.yaml` in a line and ask:
 
 - `linkedin_easy_apply` and `external_forms`: `off`, `approval` or `unattended`, and `max_applications_sent_per_day`.
 - When `external_forms` isn't `off`: run `uvx --prerelease allow atsfill@latest status`, offer every system it supports, and mark those only dry-run verified. Write the chosen systems to the `submit` list in atsfill's config (`status` prints its path). Offer `atsfill install-browser` (1.3 GB) when a chosen system needs the browser, and `atsfill login <system>` for each one that needs an account.
+- `file_github_issues`, recommending `unattended` so failures reach upstream fast. When it isn't `off`, offer to install `gh` if missing, then `gh auth login` until `gh auth status` passes.
 - `hide_known_jobs_from_linkedin_search`, and whether the default limits fit.
 
 ## 11. First track

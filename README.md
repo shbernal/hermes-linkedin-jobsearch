@@ -36,7 +36,7 @@ You decide what gets sent.
 ## Install
 
 You need [Hermes](https://hermes-agent.nousresearch.com) 0.22.2 or later, a LinkedIn account and [uv](https://docs.astral.sh/uv/).
-Setup checks for the other tools (node, git, [cratecv](https://github.com/shbernal/cratecv), optionally [Himalaya](https://github.com/pimalaya/himalaya) for email) and offers to install what is missing.
+Setup checks for the other tools (node, git, [cratecv](https://github.com/shbernal/cratecv), optionally [Himalaya](https://github.com/pimalaya/himalaya) for email and [gh](https://cli.github.com) for filing issues) and offers to install what is missing.
 
 ```bash
 hermes profile install github.com/shbernal/hermes-linkedin-jobsearch --alias
@@ -77,9 +77,11 @@ Tested with `gpt-5.6-sol` through the `openai-codex` provider, and `glm-5.3` thr
 | Send an external form | never: you send it yourself | after approval, or unattended |
 | Hide a job from LinkedIn search for good | never | on |
 | Archive email | never | on |
+| File an issue upstream when a tool fails | never: recorded in `~/jobsearch/issues/` with a link to file it | after asking, or unattended |
 | Message or connect with anyone | never: the tools are disabled | not available |
 
 Sends are capped at 2 a day by default, attended or not.
+Set issues to unattended if you can: upstream fixes come from these reports, and they carry the tool call, the system and the result, never your data.
 All of these live in `~/jobsearch/workspace.yaml`.
 
 > [!CAUTION]

@@ -22,7 +22,7 @@ CI installs the distribution into a throwaway Hermes home on every push and chec
 
 ## Bugs in the tools
 
-A LinkedIn tool that fails or misreads a page belongs to [linkedin-mcp-server](https://github.com/shbernal/linkedin-mcp-server/issues). A hiring form atsfill can't read, fill or send belongs to [atsfill](https://github.com/shbernal/atsfill/issues). Leave out your personal data, the employer and the posting URL.
+A LinkedIn tool that fails or misreads a page belongs to [linkedin-mcp-server](https://github.com/shbernal/linkedin-mcp-server/issues). A hiring form atsfill can't read, fill or send belongs to [atsfill](https://github.com/shbernal/atsfill/issues), and a skill or setup step that goes wrong belongs here. Leave out your personal data, the employer and the posting URL.
 
 ## Pull requests
 
