@@ -4,8 +4,8 @@
 # dependencies = ["pyyaml>=6"]
 # ///
 """The check every jobsearch skill runs first: the workspace exists at the schema the skills expect,
-the profile's config matches this release (sync-config.py --check), and atsfill can't send while
-`external_forms` is off.
+it has every template file (init.py adds the missing ones), the profile's config matches this
+release (sync-config.py --check), and atsfill can't send while `external_forms` is off.
 
 Prints JSON with `problems`, each with a `fix`, and exits 1 when there is any.
 """
@@ -23,6 +23,8 @@ import yaml
 SCHEMA_VERSION = 1
 WORKSPACE = Path.home() / "jobsearch"
 SYNC = Path(__file__).resolve().parent / "sync-config.py"
+INIT = Path(__file__).resolve().parent / "init.py"
+TEMPLATE = Path(__file__).resolve().parent.parent / "template"
 
 
 def load_workspace() -> tuple[dict, list[dict]]:
@@ -36,6 +38,13 @@ def load_workspace() -> tuple[dict, list[dict]]:
     if (version := workspace.get("schema_version")) != SCHEMA_VERSION:
         return workspace, [{"problem": f"schema_version is {version}, the skills expect {SCHEMA_VERSION}", "fix": "run /jobsearch-init"}]
     return workspace, []
+
+
+def template_problems() -> list[dict]:
+    files = (p.relative_to(TEMPLATE) for p in TEMPLATE.rglob("*") if p.is_file())
+    if lacking := sorted(str(p) for p in files if not (WORKSPACE / p).exists()):
+        return [{"problem": f"the workspace lacks template files: {', '.join(lacking)}", "fix": f"uv run {INIT}"}]
+    return []
 
 
 def config_problems() -> list[dict]:
@@ -74,6 +83,8 @@ def atsfill_problems(workspace: dict) -> list[dict]:
 
 def main() -> int:
     workspace, problems = load_workspace()
+    if workspace:
+        problems += template_problems()
     problems += config_problems() + atsfill_problems(workspace)
     print(json.dumps({"workspace": str(WORKSPACE), "problems": problems}, indent=2))
     return int(bool(problems))
