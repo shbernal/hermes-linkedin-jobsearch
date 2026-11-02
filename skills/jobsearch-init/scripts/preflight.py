@@ -70,14 +70,14 @@ def atsfill_problems(workspace: dict) -> list[dict]:
     if not path.exists():
         return []
     try:
-        submit = tomllib.loads(path.read_text()).get("submit")
+        submit = tomllib.loads(path.read_text()).get("submit-allowed")
     except tomllib.TOMLDecodeError as e:
         return [{"problem": f"{path} doesn't parse: {e}", "fix": "tell the user"}]
     if not submit:
         return []
     return [{
         "problem": f"{path} lets atsfill send to {submit} while external_forms is off",
-        "fix": "ask the user whether to empty the submit list or opt in to external sending in workspace.yaml, and change neither file before they answer",
+        "fix": "ask the user whether to empty submit-allowed or opt in to external sending in workspace.yaml, and change neither file before they answer",
     }]
 
 

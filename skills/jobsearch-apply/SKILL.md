@@ -31,13 +31,13 @@ Before any send:
 
 ## External forms
 
-The system's `submit_enabled` in `uvx --prerelease allow atsfill@latest status` has to be true, otherwise it's a hand-off. Rebuild `answers.json` from `answers.md`, then `atsfill send <apply_url> --answers answers.json`, once. Never pass `--resend`.
+The system's `submit_allowed` in `uvx --prerelease allow atsfill@latest status` has to name `default`, otherwise it's a hand-off. Rebuild `answers.json` from `answers.md`, then `atsfill send <apply_url> --answers answers.json -v`, once. Never pass `--resend`.
 
-- `submitted`: the result's evidence goes on the Activity line, and a `warning` goes in the report.
-- `refused`: a mismatch or invalid answer is fixed in `answers.md`, dry-run with `atsfill fill`, and sent again. `already_sent` means an earlier attempt may have gone: treat it as `unknown`. `submit_not_enabled` is a hand-off.
-- `blocked`: nothing was sent. `login_required` goes to the user with the login command its reason names, a captcha, emailed code or score refusal is a hand-off, and `time_budget` can be retried on a later run.
+- `submitted`: the result's `evidence` goes on the Activity line, and its `warnings` go in the report.
+- `refused`: a `mismatch` or `invalid_answers` is fixed in `answers.md`, dry-run with `atsfill fill`, and sent again. `already_sent` means an earlier attempt may have gone: treat it as `unknown`. Any other refusal is a hand-off.
+- `blocked`: nothing was sent. `login_required` and `profile_incomplete` go to the user with the command the reason names, a captcha, emailed code or score refusal is a hand-off, and `time_budget` can be retried on a later run.
 - `unknown`: submit was clicked with no evidence. Never send again. The entry stays `ready` with `ball: user`, counts against the day's sends, and waits for the confirmation email update-status reads.
-- `unsupported`: a hand-off.
+- `unsupported`: `posting_gone` sets `closed` and closes the entry out as `archive/README.md` says. Anything else is a hand-off.
 
 ## Recording a send
 

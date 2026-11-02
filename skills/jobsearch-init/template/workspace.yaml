@@ -10,7 +10,7 @@ schema_version: 1
 #   unattended  Advance sends on its own
 
 linkedin_easy_apply: approval   # off | approval | unattended
-external_forms: off             # off | approval | unattended, on the systems atsfill's submit list names
+external_forms: off             # off | approval | unattended, on the systems atsfill's submit-allowed names
 
 hide_known_jobs_from_linkedin_search: false   # true: dismiss_ids hides them for good
 archive_handled_emails: false                 # true: Tracking archives application emails it has handled

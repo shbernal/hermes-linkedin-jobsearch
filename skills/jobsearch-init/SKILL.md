@@ -52,7 +52,7 @@ Fill every section of `criteria.md` by interview, `## Resume` included, offering
 Explain each autonomy and limits setting in `workspace.yaml` in a line and ask:
 
 - `linkedin_easy_apply` and `external_forms`: `off`, `approval` or `unattended`, and `max_applications_sent_per_day`.
-- When `external_forms` isn't `off`: run `uvx --prerelease allow atsfill@latest status`, offer every system it supports, and mark those only dry-run verified. Write the chosen systems to the `submit` list in atsfill's config (`status` prints its path). Offer `atsfill install-browser` (1.3 GB) when a chosen system needs the browser, and `atsfill login <system>` for each one that needs an account.
+- When `external_forms` isn't `off`: run `uvx --prerelease allow atsfill@latest status` and offer the systems whose `scope` is `supported`, with the side effects a dry run has on each and its `run_history` page. Write the chosen systems to `submit-allowed` in atsfill's config (`status` prints its path). Ask the user's `telemetry` level there too: `basic`, the default, sends an anonymous event per run, and `detailed` also sends a failed run's page. Offer `atsfill install-browser` (1.3 GB) when a chosen system needs the browser, and `atsfill login <system>` for each one that needs an account.
 - `file_github_issues`, recommending `unattended` so failures reach upstream fast. When it isn't `off`, offer to install `gh` if missing, then `gh auth login` until `gh auth status` passes.
 - `hide_known_jobs_from_linkedin_search`, and whether the default limits fit.
 

@@ -25,4 +25,4 @@ The source setup stated its rule on outside actions in four contradicting places
 - Skills carry no autonomy or limits of their own. A conflict between a skill and `workspace.yaml` is a bug in the skill.
 - `SOUL.md` says that numbers in a reply refer to `pipeline/ready.md`.
 - The never-message rule is enforced by the tool exclusion, which depends on the MCP servers living in `config.yaml` ([0005](0005-dependencies.md)).
-- Nothing enforces `external_forms: off`, since the agent could write atsfill's config itself. The pre-run check reports a non-empty `submit` list while external sending is off.
+- Nothing enforces `external_forms: off`, since the agent could write atsfill's config itself. The pre-run check reports a non-empty `submit-allowed` while external sending is off.

@@ -21,7 +21,7 @@ LINKEDIN = {
     "command": "uvx",
     "args": [
         "--from",
-        "git+https://github.com/shbernal/linkedin-mcp-server@jobsearch-v1",
+        "git+https://github.com/shbernal/linkedin-mcp-server@jobsearch-v3-rc1",
         "mcp-server-linkedin",
         "--transport",
         "stdio",

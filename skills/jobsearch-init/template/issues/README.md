@@ -18,6 +18,6 @@ occurrences: 1
 Body: `# <title>`, then the issue as it would be filed: the command or tool call, the system and the result. Nothing that identifies the user, the employer or the posting: no names, contact details, profile facts, employer, posting URL or job ID.
 
 - `## Workaround`: what to do instead until the failure is fixed.
-- `## File it`: while not filed, a `https://github.com/<repo>/issues/new?title=…&body=…` link with the title and body URL-encoded.
+- `## File it`: while not filed, a `https://github.com/<repo>/issues/new?title=…&body=…` link with the title and body URL-encoded. When an atsfill result names an `atsfill report` command, which sends the posting and its page to atsfill's maintainer, add it here for the user to run.
 
 Before filing, search the repo's issues with `gh search issues`. When one matches, comment the new occurrence there instead of opening another.
