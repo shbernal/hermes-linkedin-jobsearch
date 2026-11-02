@@ -21,7 +21,7 @@ Check PATH for `uv`, `node` with `npx`, `git` and `cratecv`, and ask whether the
 
 ## 4. Workspace
 
-When `~/jobsearch/workspace.yaml` exists, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`, which only adds the template files the workspace lacks. Otherwise ask where the data should live. For `~/jobsearch`, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`. Elsewhere, run it with that path and then `ln -s <path> ~/jobsearch`. The skills always use `~/jobsearch`.
+When `~/jobsearch/workspace.yaml` exists, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`, which only adds the template files the workspace lacks. At `schema_version: 1`, first run `uv run ${HERMES_SKILL_DIR}/scripts/migrate.py`. Its commit replaces the template's READMEs: restore any lines the user had added to them from its diff, and settle every setting it reports without a place with the user. Otherwise ask where the data should live. For `~/jobsearch`, run `uv run ${HERMES_SKILL_DIR}/scripts/init.py`. Elsewhere, run it with that path and then `ln -s <path> ~/jobsearch`. The skills always use `~/jobsearch`.
 
 ## 5. Skills
 

@@ -15,7 +15,7 @@ A dossier refreshed in the last few days is reused as is.
 4. Funding stage and recent rounds on the web when LinkedIn doesn't show them, keeping the source URLs.
 5. Write `employers/<slug>.md` as `employers/README.md` says.
 6. Settle each `new` entry at this employer, with the reason on its Activity line and the dossier as the source:
-   - The posting stopped taking applications: `closed`. Check this first, since nothing else matters once it's gone.
+   - The posting stopped taking applications: `closed`. Check this first, since nothing else matters once it's gone. Employers often repost a role under a new job ID rather than reopen it, so look for a live repost among the employer's jobs first. One found carries the entry on: move its pipeline and market records to the new ID, URL and posted date, and say so on the Activity line.
    - A hard filter from `criteria.md` that the dossier disproves: `dropped`.
    - Otherwise `shortlisted`. A doubt the hard filters don't settle shortlists the entry and is reported, since an entry nobody acts on is worse than one the user drops.
 

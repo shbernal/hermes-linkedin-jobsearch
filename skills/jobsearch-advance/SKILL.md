@@ -22,6 +22,8 @@ Run what the status calls for, then look again, until the entry is no longer the
 - `ready`: the jobsearch-apply skill when `workspace.yaml` sets this entry's kind (`linkedin_easy_apply` or `external_forms`) to `unattended`. Otherwise it stops here for the user.
 - Any other status: the work under `## Next action`, such as interview prep. What would go out to someone is drafted for the user.
 
+A user who names a status, as in "move it to ready", sets where the run stops, whatever `unattended` would allow.
+
 A failed step leaves the entry where it was, still the agent's, with an Activity line saying the step failed rather than what it would have found.
 
 ## Ready list

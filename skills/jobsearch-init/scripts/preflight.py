@@ -20,7 +20,7 @@ from pathlib import Path
 
 import yaml
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 WORKSPACE = Path.home() / "jobsearch"
 SYNC = Path(__file__).resolve().parent / "sync-config.py"
 INIT = Path(__file__).resolve().parent / "init.py"
@@ -36,7 +36,8 @@ def load_workspace() -> tuple[dict, list[dict]]:
     except yaml.YAMLError as e:
         return {}, [{"problem": f"{path} doesn't parse: {e}", "fix": "repair the file"}]
     if (version := workspace.get("schema_version")) != SCHEMA_VERSION:
-        return workspace, [{"problem": f"schema_version is {version}, the skills expect {SCHEMA_VERSION}", "fix": "run /jobsearch-init"}]
+        fix = "run /jobsearch-init" if version == 1 else "tell the user"
+        return workspace, [{"problem": f"schema_version is {version}, the skills expect {SCHEMA_VERSION}", "fix": fix}]
     return workspace, []
 
 
@@ -83,9 +84,9 @@ def atsfill_problems(workspace: dict) -> list[dict]:
 
 def main() -> int:
     workspace, problems = load_workspace()
-    if workspace:
-        problems += template_problems()
-    problems += config_problems() + atsfill_problems(workspace)
+    if not problems:
+        problems += template_problems() + atsfill_problems(workspace)
+    problems += config_problems()
     print(json.dumps({"workspace": str(WORKSPACE), "problems": problems}, indent=2))
     return int(bool(problems))
 
