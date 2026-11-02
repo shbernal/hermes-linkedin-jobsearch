@@ -1,5 +1,5 @@
 name: jobsearch
-version: 0.1.0
+version: 0.2.0
 description: "Job-search agent on LinkedIn: finds postings, researches employers, tailors resumes, applies with approval and tracks applications"
 hermes_requires: ">=0.22.2"
 author: shbernal
