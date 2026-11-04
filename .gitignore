@@ -58,3 +58,6 @@ cron/*
 skills/.*
 
 .claude/worktrees/
+
+# README drafts
+.tmp/
