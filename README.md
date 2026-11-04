@@ -31,6 +31,11 @@ You decide what gets sent.
 - Status tracking from LinkedIn and, optionally, your email.
 - A weekly report on what each track's postings ask for.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/entry-dark.svg">
+  <img alt="A ready entry: the employer dossier with its shortlist verdict, and the tailored resume and form answers, each line linked to the profile fact it comes from" src="assets/entry-light.svg">
+</picture>
+
 ## Install
 
 You need [Hermes](https://hermes-agent.nousresearch.com) 0.22.2 or later, a LinkedIn account and [uv](https://docs.astral.sh/uv/).
@@ -61,6 +66,11 @@ This creates a `jobsearch` profile and a `jobsearch` command next to your other 
    ```text
    /jobsearch-init
    ```
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/setup-dark.svg">
+  <img alt="A /jobsearch-init session: LinkedIn login, profile facts, criteria, autonomy, a first track and the scheduled runs" src="assets/setup-light.svg">
+</picture>
 
 Setup logs in to LinkedIn, builds your profile facts from LinkedIn and your CV, interviews you for your criteria, sets what may be sent without asking, creates a first track and schedules the jobs.
 It can stop at any step: running it again picks up where it left off.

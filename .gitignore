@@ -61,3 +61,4 @@ skills/.*
 
 # README drafts
 .tmp/
+__pycache__/

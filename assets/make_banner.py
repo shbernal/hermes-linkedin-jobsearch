@@ -89,7 +89,7 @@ def contrast(a, b):
 THEMES = {
     "dark": dict(
         page="#0d1117", win="#1a1b26", bar="#16161e", border="#3b4261",
-        fg="#c0caf5", dim="#787fa6", blue="#7aa2f7", purple="#bb9af7",
+        fg="#c0caf5", dim="#8a91b8", blue="#7aa2f7", purple="#bb9af7",
         green="#9ece6a", amber="#e0af68", red="#f7768e",
         title="#c0caf5", sub="#a9b1d6", pick="#9ece6a", pick_alpha=0.10,
         shadow=0.0,
@@ -97,8 +97,8 @@ THEMES = {
     # Tokyo Night Day text tones: the night accents are too light on white.
     "light": dict(
         page="#ffffff", win="#e1e2e7", bar="#d4d6e4", border="#c4c8da",
-        fg="#3760bf", dim="#5a6390", blue="#2a6bd6", purple="#7847bd",
-        green="#4d6a2f", amber="#7a5a28", red="#c64343",
+        fg="#2f4f9e", dim="#4f5783", blue="#2259b8", purple="#7040b0",
+        green="#456029", amber="#7a5a28", red="#c64343",
         title="#343b58", sub="#4c5372", pick="#9ece6a", pick_alpha=0.24,
         shadow=0.10,
     ),
