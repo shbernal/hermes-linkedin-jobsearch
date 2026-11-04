@@ -1,6 +1,9 @@
 <div align="center">
 
-# hermes-linkedin-jobsearch
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img alt="hermes-linkedin-jobsearch: the agent lists ready entries, you reply apply 1 and 3" src="assets/banner-light.svg">
+</picture>
 
 A job-search agent for [Hermes](https://hermes-agent.nousresearch.com) that works your LinkedIn pipeline from posting to answer.
 
@@ -16,11 +19,6 @@ A job-search agent for [Hermes](https://hermes-agent.nousresearch.com) that work
 ---
 
 </div>
-
-> [!WARNING]
-> 0.x is not stable: skills, workspace layout and settings can change between releases.
-
-<!-- Demo placeholder: record a terminal session of `/jobsearch-init` reaching the first track, or a scheduled-run report ending with the numbered ready list. -->
 
 hermes-linkedin-jobsearch is a Hermes profile distribution.
 It installs an agent that searches LinkedIn on a schedule, researches the employers behind the postings, tailors a resume and answers for each one, and keeps track of every application.
