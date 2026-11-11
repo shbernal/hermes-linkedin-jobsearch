@@ -126,7 +126,7 @@ LinkedIn access goes through a pinned [fork of linkedin-mcp-server](https://gith
 [version-badge]: https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fshbernal%2Fhermes-linkedin-jobsearch%2Fmain%2Fdistribution.yaml&query=%24.version&label=version&style=for-the-badge&color=7aa2f7
 [hermes]: https://hermes-agent.nousresearch.com
 [hermes-badge]: https://img.shields.io/badge/hermes-%E2%89%A50.22.2-bb9af7?style=for-the-badge
-[ci]: https://github.com/shbernal/hermes-linkedin-jobsearch/actions/workflows/install.yml
-[ci-badge]: https://img.shields.io/github/actions/workflow/status/shbernal/hermes-linkedin-jobsearch/install.yml?branch=main&label=install&style=for-the-badge&color=9ece6a
+[ci]: https://github.com/shbernal/hermes-linkedin-jobsearch/actions/workflows/ci.yml
+[ci-badge]: https://img.shields.io/github/actions/workflow/status/shbernal/hermes-linkedin-jobsearch/ci.yml?branch=main&label=install&style=for-the-badge&color=9ece6a
 [license]: LICENSE
 [license-badge]: https://img.shields.io/github/license/shbernal/hermes-linkedin-jobsearch?style=for-the-badge&color=e0af68

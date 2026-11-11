@@ -1,7 +1,9 @@
-name: install
+name: CI
 
 on:
   push:
+    branches: [main]
+    tags: ["v*"]
   pull_request:
 
 permissions:
@@ -12,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
 
       - name: Install Hermes at the hermes_requires minimum
         run: |
@@ -65,3 +67,14 @@ jobs:
           uv run -q "$HERMES_HOME/profiles/jobsearch/skills/jobsearch-init/scripts/init.py" "$ws"
           diff -r --exclude=.git skills/jobsearch-init/template "$ws"
           test -z "$(git -C "$ws" status --porcelain)"
+
+  commit-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+      - uses: commit-check/commit-check-action@d68e05baf9511853193e2749f8a64bf2a221619a # v2.22.0
+        with:
+          message: true
+          branch: false
