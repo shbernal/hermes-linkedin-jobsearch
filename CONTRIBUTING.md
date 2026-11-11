@@ -18,7 +18,7 @@ hermes profile update jobsearch-test
 
 The [architecture decisions](docs/adr/README.md) are the reference for what the skills do. [AGENTS.md](AGENTS.md) holds the rules every change follows.
 
-CI installs the distribution into a throwaway Hermes home on every push and checks that only the paths in `distribution_owned` reach the profile.
+CI installs the distribution into a throwaway Hermes home on every pull request and push to `main` and checks that only the paths in `distribution_owned` reach the profile.
 
 ## Bugs in the tools
 
